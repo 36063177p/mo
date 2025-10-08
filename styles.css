@@ -1,0 +1,7874 @@
+/* الألوان الكلاسيكية الأنيقة */
+:root {
+    /* ألوان كلاسيكية فاخرة */
+    --classic-gold: #D4AF37; /* ذهبي كلاسيكي */
+    --classic-navy: #000000; /* أزرق كحلي عميق */
+    --classic-burgundy: #800020; /* أحمر عنابي */
+    --classic-emerald: #50C878; /* أخضر زمردي */
+    --classic-cream: #F5F5DC; /* كريمي فاتح */
+    --classic-charcoal: #36454F; /* رمادي فحمي */
+    --classic-ivory: #FFFFF0; /* عاجي */
+    --classic-mahogany: #C04000; /* بني محمر */
+    
+    /* الألوان الأساسية المطورة */
+    --primary-color: var(--classic-navy); 
+    --primary-light: var(--classic-cream);
+    --secondary-color: var(--classic-gold);
+    --success-color: var(--classic-emerald);
+    --warning-color: #F4A261; /* برتقالي دافئ */
+    --danger-color: var(--classic-burgundy);
+    --text-primary: #2C3E50; /* أزرق داكن مريح للعين */
+    --text-secondary: #5D6D7E; /* رمادي متوسط أنيق */
+    
+    /* تصميم كلاسيكي مطور */
+    --border-radius: 20px; /* حواف أقل استدارة للطابع الكلاسيكي */
+    --box-shadow: 0 8px 25px rgba(27, 54, 93, 0.15);
+    --transition: all 0.3s ease;
+    
+    /* تدرجات كلاسيكية أنيقة */
+    --gradient-primary: linear-gradient(145deg, #000000 0%, #2E4A6B 50%, #41679A 100%);
+    --gradient-secondary: linear-gradient(145deg, #D4AF37 0%, #E6C757 50%, #F1D474 100%);
+    --gradient-success: linear-gradient(145deg, #50C878 0%, #66D28A 50%, #7FDD9C 100%);
+    --gradient-warning: linear-gradient(145deg, #F4A261 0%, #F6B074 50%, #F8BE87 100%);
+    --gradient-danger: linear-gradient(145deg, #800020 0%, #993366 50%, #B3667A 100%);
+    
+    /* تدرجات فاخرة للبطاقات المميزة */
+    --gradient-luxury: linear-gradient(145deg, #000000 0%, #D4AF37 25%, #000000 50%, #E6C757 75%, #000000 100%);
+    --gradient-elegant: linear-gradient(145deg, #2C3E50 0%, #34495E 50%, #5D6D7E 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'tajawal', 'Times New Roman', serif;
+}
+
+/* تحسين النصوص والعناوين الكلاسيكية */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'tajawal', 'Times New Roman', serif;
+    color: var(--classic-navy);
+    letter-spacing: 0.3px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* تحسين النصوص العامة */
+p, span, div {
+    font-family: 'tajawal', 'Times New Roman', serif;
+    line-height: 1.7;
+}
+
+/* لمسة ذهبية للعناصر المهمة */
+.golden-accent {
+    color: var(--classic-gold);
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* إطار كلاسيكي للبطاقات */
+.classic-border {
+    border: 2px solid;
+    border-image: linear-gradient(45deg, var(--classic-gold), var(--classic-navy), var(--classic-gold)) 1;
+    border-radius: 0; /* إزالة الاستدارة للحصول على مظهر كلاسيكي أكثر */
+}
+
+body {
+    /* خلفية كلاسيكية أنيقة */
+    background: linear-gradient(145deg, #F8F9FA 0%, #E9ECEF 30%, #F5F5DC 70%, #FFFFFF 100%);
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+    color: var(--text-primary);
+    line-height: 1.7; /* مسافة أكبر بين الأسطر للقراءة المريحة */
+    position: relative;
+    font-family: 'tajawal', 'Times New Roman', serif; /* خط كلاسيكي أنيق */
+    /* إضافة نمط خفيف يشبه الورق الفاخر */
+    background-attachment: fixed;
+}
+
+/* إضافة تأثيرات الخلفية المتحركة */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    animation: float 20s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(1deg); }
+    66% { transform: translateY(10px) rotate(-1deg); }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* تحسين قسم لوحة المعلومات */
+.dashboard-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* تحسين البطاقات الإحصائية */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+    padding: 28px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.stat-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.stat-card:hover::after {
+    transform: translateX(100%);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.25);
+}
+
+.stat-card h3 {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    animation: numberCount 2s ease-out;
+}
+
+@keyframes numberCount {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.stat-value::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover .stat-value::after {
+    transform: scaleX(1);
+}
+
+.stat-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stat-details span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 12px;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.stat-details span:hover {
+    background: rgba(102, 126, 234, 0.15);
+    transform: translateX(4px);
+}
+
+/* تحسين قسم الشحنات القادمة */
+.upcoming-shipments-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+    padding: 28px;
+    margin-bottom: 32px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* الأنماط الجديدة للتصميم المبسط */
+
+/* أزرار الوصول السريع المبسطة */
+.quick-actions-simplified {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 16px 32px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    min-width: 160px;
+    justify-content: center;
+    transform: translateZ(0);
+}
+
+.action-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.action-btn:hover::before {
+    transform: translateX(100%);
+}
+
+.action-btn.primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.action-btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.action-btn.secondary {
+    background: var(--gradient-secondary);
+    color: white;
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.3);
+}
+
+.action-btn.secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
+}
+
+/* البطاقات الإحصائية المبسطة */
+.stats-grid-simplified {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.stat-card-modern {
+    /* بطاقة كلاسيكية أنيقة */
+    background: linear-gradient(145deg, #FFFFFF 0%, #F8F9FA 50%, #FFFFFF 100%);
+    backdrop-filter: blur(15px);
+    border-radius: var(--border-radius);
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 
+        0 8px 25px rgba(27, 54, 93, 0.1),
+        0 2px 10px rgba(212, 175, 55, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(205, 158, 2, 0.94);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-secondary);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.stat-card-modern:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-card-modern:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 15px 35px rgba(27, 54, 93, 0.2),
+        0 5px 15px rgba(212, 175, 55, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border-color: var(--classic-gold);
+}
+
+.stat-card-modern.highlighted {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(79, 172, 254, 0.1) 100%);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.stat-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    flex-shrink: 0;
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.orders-icon {
+    background: var(--gradient-primary);
+    border: 2px solid rgba(27, 54, 93, 0.3);
+}
+
+.orders-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(27, 54, 93, 0.3);
+}
+
+.shipments-icon {
+    background: var(--gradient-secondary);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.shipments-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.upcoming-icon {
+    background: var(--gradient-warning);
+    border: 2px solid rgba(244, 162, 97, 0.3);
+}
+
+.upcoming-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(244, 162, 97, 0.3);
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--classic-navy);
+    margin: 0 0 12px 0;
+    letter-spacing: 0.3px;
+    font-family: 'tajawal', 'Times New Roman', serif;
+}
+
+.stat-content .stat-value {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--classic-navy);
+    margin: 0 0 8px 0;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.stat-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+/* بطاقة قيمة الحاويات المحسنة والمتطورة */
+.container-value-section-enhanced {
+    margin: 32px 0;
+    position: relative;
+    perspective: 1000px;
+}
+
+.value-card-premium {
+    background: linear-gradient(145deg, 
+        rgba(27, 54, 93, 0.95) 0%, 
+        rgba(44, 74, 107, 0.98) 25%, 
+        rgba(212, 175, 55, 0.1) 50%, 
+        rgba(44, 74, 107, 0.98) 75%, 
+        rgba(27, 54, 93, 0.95) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        0 8px 30px rgba(212, 175, 55, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.value-card-premium::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, 
+        var(--classic-gold) 0%, 
+        var(--classic-navy) 25%, 
+        var(--classic-gold) 50%, 
+        var(--classic-navy) 75%, 
+        var(--classic-gold) 100%);
+    border-radius: 25px;
+    z-index: -1;
+    animation: borderGlow 4s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% { opacity: 0.6; filter: blur(0px); }
+    50% { opacity: 1; filter: blur(2px); }
+}
+
+.value-card-premium::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent);
+    transition: left 0.8s ease;
+}
+
+.value-card-premium:hover::after {
+    left: 100%;
+}
+
+.value-card-premium:hover {
+    transform: translateY(-8px) rotateX(5deg);
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.2),
+        0 12px 40px rgba(212, 175, 55, 0.3);
+}
+
+/* Header البطاقة المتطور */
+.value-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.header-icon-container {
+    position: relative;
+}
+
+.financial-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(145deg, var(--classic-gold) 0%, #F1D474 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--classic-navy);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 8px 25px rgba(212, 175, 55, 0.4),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-5px) rotate(2deg); }
+    66% { transform: translateY(2px) rotate(-1deg); }
+}
+
+.icon-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.header-content h3 {
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(80, 200, 120, 0.2);
+    padding: 4px 12px;
+    border-radius: 15px;
+    border: 1px solid rgba(80, 200, 120, 0.4);
+}
+
+.pulse-dot.financial {
+    width: 8px;
+    height: 8px;
+    background: var(--classic-emerald);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.live-indicator span {
+    color: var(--classic-emerald);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.value-trend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(80, 200, 120, 0.1);
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(80, 200, 120, 0.3);
+}
+
+.trend-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.trend-icon.positive {
+    background: var(--gradient-success);
+    color: white;
+}
+
+.trend-percentage {
+    color: var(--classic-emerald);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* عرض القيمة الرئيسية المتطور */
+.main-value-container {
+    text-align: center;
+    margin: 32px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.currency-symbol {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-200px);
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(212, 175, 55, 0.6);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: currencyFloat 8s ease-in-out infinite;
+}
+
+@keyframes currencyFloat {
+    0%, 100% { transform: translateX(-200px) rotate(0deg); }
+    50% { transform: translateX(-250px) rotate(5deg); }
+}
+
+.value-display {
+    position: relative;
+    display: inline-block;
+}
+
+.stat-value-enhanced {
+    font-size: 4rem !important;
+    font-weight: 900;
+    color: #FFFFFF;
+    text-shadow: 
+        3px 3px 6px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(212, 175, 55, 0.4),
+        0 0 60px rgba(212, 175, 55, 0.2);
+    letter-spacing: 2px;
+    line-height: 1;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(45deg, #FFFFFF 0%, var(--classic-gold) 50%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: valueGlow 4s ease-in-out infinite;
+}
+
+@keyframes valueGlow {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.2); }
+}
+
+.value-animation-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    animation: valueShimmer 3s ease-in-out infinite;
+}
+
+@keyframes valueShimmer {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.value-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* تفصيل القيم بمؤشرات تقدم */
+.value-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 32px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.breakdown-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.breakdown-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--classic-gold);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.breakdown-item:hover::before {
+    transform: scaleX(1);
+}
+
+.breakdown-item:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+}
+
+.breakdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.period-icon {
+    width: 35px;
+    height: 35px;
+    background: var(--gradient-secondary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--classic-navy);
+}
+
+.period-label {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.9rem;
+    flex: 1;
+    text-align: center;
+}
+
+.progress-indicator {
+    position: relative;
+}
+
+.progress-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: conic-gradient(var(--classic-gold) 0deg, var(--classic-gold) 126deg, rgba(255, 255, 255, 0.2) 126deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.progress-circle::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: rgba(27, 54, 93, 0.9);
+    border-radius: 50%;
+}
+
+.progress-value {
+    position: relative;
+    z-index: 1;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.breakdown-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--classic-gold);
+    margin: 12px 0 8px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.breakdown-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* الإحصائيات الإضافية */
+.additional-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.stat-icon.revenue {
+    background: var(--gradient-primary);
+}
+
+.stat-icon.growth {
+    background: var(--gradient-success);
+}
+
+.stat-icon.efficiency {
+    background: var(--gradient-warning);
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 4px;
+}
+
+.stat-figure {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+/* أزرار العمل المتطورة */
+.action-buttons-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.action-btn-enhanced {
+    flex: 1;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-btn-enhanced.primary {
+    background: var(--gradient-secondary);
+    color: var(--classic-navy);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.action-btn-enhanced.secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.action-btn-enhanced.tertiary {
+    background: var(--gradient-primary);
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(27, 54, 93, 0.3);
+}
+
+.action-btn-enhanced:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.action-btn-enhanced:hover::before {
+    left: 100%;
+}
+
+/* العناصر المتحركة في الخلفية */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-coin {
+    position: absolute;
+    font-size: 2rem;
+    color: rgba(212, 175, 55, 0.1);
+    font-weight: 900;
+    animation: floatCoin 15s linear infinite;
+}
+
+.coin-1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.coin-2 {
+    top: 60%;
+    right: 15%;
+    animation-delay: 5s;
+}
+
+.coin-3 {
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 10s;
+}
+
+@keyframes floatCoin {
+    0% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
+    25% { transform: translateY(-20px) rotate(90deg); opacity: 0.3; }
+    50% { transform: translateY(-10px) rotate(180deg); opacity: 0.1; }
+    75% { transform: translateY(-30px) rotate(270deg); opacity: 0.2; }
+    100% { transform: translateY(0px) rotate(360deg); opacity: 0.1; }
+}
+
+/* التجاوبية */
+@media (max-width: 768px) {
+    .value-card-premium {
+        padding: 24px;
+        margin: 16px 0;
+    }
+    
+    .value-card-header {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+    
+    .stat-value-enhanced {
+        font-size: 3rem !important;
+    }
+    
+    .currency-symbol {
+        font-size: 3rem;
+        transform: translateX(-150px);
+    }
+    
+    .value-breakdown {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .additional-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .action-buttons-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* أنماط المودالات الجديدة */
+.financial-details-modal .modal-content,
+.projections-modal .modal-content {
+    max-width: 900px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: linear-gradient(145deg, #FFFFFF 0%, #F8F9FA 100%);
+    border-radius: 20px;
+    border: 2px solid var(--classic-gold);
+}
+
+.financial-header,
+.projections-header {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 20px;
+    border-radius: 18px 18px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.financial-header h3,
+.projections-header h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.financial-close,
+.projections-close {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.financial-close:hover,
+.projections-close:hover {
+    transform: scale(1.2);
+}
+
+.financial-content,
+.projections-content {
+    padding: 30px;
+}
+
+.financial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+}
+
+.financial-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 24px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.financial-card h4 {
+    color: var(--classic-navy);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--classic-gold);
+    padding-bottom: 8px;
+}
+
+.value-distribution {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.distribution-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid var(--classic-gold);
+}
+
+.distribution-item .period {
+    font-weight: 600;
+    color: var(--classic-navy);
+}
+
+.distribution-item .value {
+    font-weight: 700;
+    color: var(--classic-gold);
+    font-size: 1.1rem;
+}
+
+.distribution-item .percentage {
+    background: var(--classic-navy);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.stat-row .stat-value {
+    color: var(--classic-navy);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* أنماط مودال التوقعات */
+.projection-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.projection-card {
+    background: linear-gradient(145deg, #FFFFFF 0%, #F8F9FA 100%);
+    border-radius: 15px;
+    padding: 24px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.projection-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--classic-gold);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.projection-card:hover::before {
+    transform: scaleX(1);
+}
+
+.projection-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--classic-gold);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2);
+}
+
+.projection-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-secondary);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 1.5rem;
+    color: var(--classic-navy);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+.projection-card h4 {
+    color: var(--classic-navy);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.projection-value {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--classic-gold);
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.projection-confidence {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.projection-factors {
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 15px;
+    padding: 24px;
+    border-left: 4px solid var(--classic-gold);
+}
+
+.projection-factors h4 {
+    color: var(--classic-navy);
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.projection-factors ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.projection-factors li {
+    padding: 8px 0;
+    color: var(--text-primary);
+    font-weight: 500;
+    position: relative;
+    padding-left: 24px;
+}
+
+.projection-factors li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--classic-gold);
+    font-size: 0.8rem;
+}
+
+/* التجاوبية للمودالات */
+@media (max-width: 768px) {
+    .financial-details-modal .modal-content,
+    .projections-modal .modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .financial-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .projection-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .financial-content,
+    .projections-content {
+        padding: 20px;
+    }
+    
+    .distribution-item {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}
+
+/* قسم حالة الشحنات المبسط */
+.shipment-status-simplified {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+    padding: 28px;
+    margin-bottom: 32px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-header-clean {
+    margin-bottom: 20px;
+}
+
+.section-header-clean h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.section-header-clean h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.status-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.status-item-clean {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.status-item-clean:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.status-item-clean .status-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.status-item-clean.customs .status-icon {
+    background: var(--gradient-success);
+}
+
+.status-item-clean.payment .status-icon {
+    background: var(--gradient-secondary);
+}
+
+.status-info {
+    flex: 1;
+}
+
+.status-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.status-numbers {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.status-numbers .completed {
+    color: var(--success-color);
+}
+
+.status-numbers .separator {
+    color: var(--text-secondary);
+}
+
+.status-numbers .total {
+    color: var(--text-secondary);
+}
+
+.status-progress-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: conic-gradient(var(--success-color) 0deg, var(--success-color) 0deg, #e2e8f0 0deg, #e2e8f0 360deg);
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* قسم المراجعة السريعة المحسن */
+.quick-review-section-enhanced {
+    background: linear-gradient(145deg, #FFFFFF 0%, #F8F9FA 50%, #FFFFFF 100%);
+    backdrop-filter: blur(25px);
+    border-radius: var(--border-radius);
+    padding: 32px;
+    margin-bottom: 40px;
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.1),
+        0 5px 20px rgba(212, 175, 55, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border: 3px solid rgba(212, 175, 55, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.priority-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, 
+        var(--classic-burgundy) 0%, 
+        var(--classic-gold) 25%, 
+        var(--classic-emerald) 50%, 
+        var(--classic-gold) 75%, 
+        var(--classic-burgundy) 100%);
+    animation: priorityGlow 3s ease-in-out infinite;
+}
+
+@keyframes priorityGlow {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* رأس القسم المحسن */
+.section-header-premium {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.real-time-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(80, 200, 120, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(80, 200, 120, 0.3);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--classic-emerald);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.real-time-indicator span {
+    font-size: 0.85rem;
+    color: var(--classic-emerald);
+    font-weight: 600;
+}
+
+.total-issues-counter {
+    text-align: center;
+    background: linear-gradient(145deg, var(--classic-burgundy), #993366);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(128, 0, 32, 0.3);
+}
+
+.total-issues-counter span {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.total-issues-counter small {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+/* شبكة البطاقات المحسنة */
+.review-cards-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+/* بطاقات المراجعة المتطورة */
+.review-card-premium {
+    background: linear-gradient(145deg, #FFFFFF 0%, #F8F9FA 100%);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: 2px solid transparent;
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.08),
+        0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.review-card-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.8s ease;
+    z-index: 1;
+}
+
+.review-card-premium:hover::before {
+    transform: translateX(100%);
+}
+
+.review-card-premium:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 20px 45px rgba(0, 0, 0, 0.15),
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* أنواع البطاقات */
+.review-card-premium.urgent {
+    border-color: var(--classic-burgundy);
+}
+
+.review-card-premium.urgent:hover {
+    box-shadow: 
+        0 20px 45px rgba(128, 0, 32, 0.2),
+        0 8px 25px rgba(128, 0, 32, 0.1);
+}
+
+.review-card-premium.critical {
+    border-color: var(--classic-gold);
+}
+
+.review-card-premium.critical:hover {
+    box-shadow: 
+        0 20px 45px rgba(212, 175, 55, 0.2),
+        0 8px 25px rgba(212, 175, 55, 0.1);
+}
+
+.review-card-premium.warning {
+    border-color: var(--warning-color);
+}
+
+.review-card-premium.warning:hover {
+    box-shadow: 
+        0 20px 45px rgba(244, 162, 97, 0.2),
+        0 8px 25px rgba(244, 162, 97, 0.1);
+}
+
+.review-card-premium.info {
+    border-color: var(--classic-emerald);
+}
+
+.review-card-premium.info:hover {
+    box-shadow: 
+        0 20px 45px rgba(80, 200, 120, 0.2),
+        0 8px 25px rgba(80, 200, 120, 0.1);
+}
+
+/* رأس البطاقة */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 18px;
+    animation: iconPulse 2s infinite;
+}
+
+@keyframes iconPulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+.customs-urgent {
+    background: var(--gradient-danger);
+}
+
+.payment-critical {
+    background: var(--gradient-secondary);
+}
+
+.overdue-warning {
+    background: var(--gradient-warning);
+}
+
+.late-info {
+    background: var(--gradient-success);
+}
+
+/* مؤشرات التقدم الدائرية */
+.progress-ring {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.progress-ring svg {
+    width: 40px;
+    height: 40px;
+    transform: rotate(-90deg);
+}
+
+.ring-bg {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.1);
+    stroke-width: 3;
+}
+
+.ring-progress {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 113;
+    stroke-dashoffset: 113;
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.customs-progress {
+    stroke: var(--classic-burgundy);
+}
+
+.payment-progress {
+    stroke: var(--classic-gold);
+}
+
+.overdue-progress {
+    stroke: var(--warning-color);
+}
+
+.late-progress {
+    stroke: var(--classic-emerald);
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* محتوى البطاقة */
+.card-content h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--classic-navy);
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.count-display {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.main-count {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--classic-navy);
+    line-height: 1;
+}
+
+.count-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.trend-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.trend-icon {
+    font-size: 0.7rem;
+}
+
+.trend-icon:not(.positive) {
+    color: var(--classic-burgundy);
+}
+
+.trend-icon.positive {
+    color: var(--classic-emerald);
+}
+
+.trend-value {
+    color: var(--text-primary);
+}
+
+.trend-period {
+    color: var(--text-secondary);
+}
+
+/* أزرار العمل */
+.action-button {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #F8F9FA 0%, #E9ECEF 100%);
+    color: var(--classic-navy);
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.customs-action {
+    border-color: var(--classic-burgundy);
+}
+
+.customs-action:hover {
+    background: var(--gradient-danger);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(128, 0, 32, 0.3);
+}
+
+.payment-action {
+    border-color: var(--classic-gold);
+}
+
+.payment-action:hover {
+    background: var(--gradient-secondary);
+    color: var(--classic-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+.overdue-action {
+    border-color: var(--warning-color);
+}
+
+.overdue-action:hover {
+    background: var(--gradient-warning);
+    color: var(--classic-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(244, 162, 97, 0.3);
+}
+
+.late-action {
+    border-color: var(--classic-emerald);
+}
+
+.late-action:hover {
+    background: var(--gradient-success);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(80, 200, 120, 0.3);
+}
+
+/* مؤشرات الأداء */
+.performance-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background: linear-gradient(145deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 255, 255, 0.8) 100%);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.performance-metric {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.metric-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.metric-icon.efficiency {
+    background: var(--gradient-success);
+}
+
+.metric-icon.completion {
+    background: var(--gradient-secondary);
+}
+
+.metric-icon.response {
+    background: var(--gradient-primary);
+}
+
+.metric-content {
+    flex: 1;
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--classic-navy);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* التجاوبية */
+@media (max-width: 768px) {
+    .quick-review-section-enhanced {
+        padding: 20px;
+        margin-bottom: 24px;
+    }
+    
+    .section-header-premium {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+    
+    .review-cards-grid-premium {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .performance-overview {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 16px;
+    }
+    
+    .performance-metric {
+        padding: 12px;
+    }
+}
+
+.review-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: right;
+    position: relative;
+    overflow: hidden;
+}
+
+.review-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 1);
+}
+
+.review-btn.pending-customs {
+    border-left: 4px solid #ff6b6b;
+}
+
+.review-btn.pending-payment {
+    border-left: 4px solid #4facfe;
+}
+
+.review-btn.overdue-shipments {
+    border-left: 4px solid #fa709a;
+}
+
+.review-btn.arrived-late {
+    border-left: 4px solid #667eea;
+}
+
+.review-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.pending-customs .review-icon {
+    background: var(--gradient-danger);
+}
+
+.pending-payment .review-icon {
+    background: var(--gradient-secondary);
+}
+
+.overdue-shipments .review-icon {
+    background: var(--gradient-warning);
+}
+
+.arrived-late .review-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.review-count {
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+/* نافذة الحاويات المعلقة */
+.large-modal {
+    max-width: 900px !important;
+    width: 90vw;
+}
+
+#pendingContainersHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.modal-stats {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.pending-containers-content {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.containers-filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.containers-filters input,
+.containers-filters select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.containers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.container-item {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 16px;
+    border-left: 4px solid;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.container-item:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateX(4px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container-item.customs-pending {
+    border-left-color: #ff6b6b;
+}
+
+.container-item.payment-pending {
+    border-left-color: #4facfe;
+}
+
+.container-item.overdue {
+    border-left-color: #fa709a;
+}
+
+.container-item.arrived-late {
+    border-left-color: #667eea;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.container-number {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.container-status {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.container-status.customs {
+    background: rgba(255, 107, 107, 0.15);
+    color: #dc2626;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.container-status.payment {
+    background: rgba(79, 172, 254, 0.15);
+    color: #2563eb;
+    border: 1px solid rgba(79, 172, 254, 0.3);
+}
+
+.container-status.overdue {
+    background: rgba(247, 112, 154, 0.15);
+    color: #be185d;
+    border: 1px solid rgba(247, 112, 154, 0.3);
+}
+
+.container-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.container-detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-detail strong {
+    color: var(--text-primary);
+}
+
+/* أيقونات حالة الشحنات */
+.status-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.header-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.container-status-icons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.container-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex: 1;
+}
+
+/* تنسيق أيقونات الإفراج الجمركي */
+.customs-completed {
+    color: #43e97b !important;
+    font-size: 1.1rem;
+    animation: pulse-success 2s infinite;
+}
+
+.customs-pending {
+    color: #ff6b6b !important;
+    font-size: 1.1rem;
+    animation: pulse-warning 2s infinite;
+}
+
+/* تنسيق أيقونات الدفع */
+.payment-completed {
+    color: #4facfe !important;
+    font-size: 1.1rem;
+    animation: pulse-success 2s infinite;
+}
+
+.payment-pending {
+    color: #fa709a !important;
+    font-size: 1.1rem;
+    animation: pulse-warning 2s infinite;
+}
+
+/* تأثيرات النبض للأيقونات */
+@keyframes pulse-success {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes pulse-warning {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+/* تحسين عرض بطاقات الشحنات */
+.shipment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 12px;
+}
+
+.shipment-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    flex: 1;
+}
+
+/* تحسين عرض الحاويات في النوافذ المنبثقة */
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 12px;
+}
+
+/* Tooltips للأيقونات */
+.status-icons i,
+.container-status-icons i {
+    cursor: help;
+    transition: all 0.2s ease;
+}
+
+.status-icons i:hover,
+.container-status-icons i:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/* تجميع الأيقونات بشكل أنيق */
+.status-icons {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-status-icons {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2px 6px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* شارات الحالة المحسنة */
+.time-badge {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* شارات الحالة في الجداول */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.status-badge.customs-released {
+    background: rgba(67, 233, 123, 0.15);
+    color: #43e97b;
+    border: 1px solid rgba(67, 233, 123, 0.3);
+}
+
+.status-badge.customs-pending {
+    background: rgba(255, 107, 107, 0.15);
+    color: #ff6b6b;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.status-badge.payment-completed {
+    background: rgba(79, 172, 254, 0.15);
+    color: #4facfe;
+    border: 1px solid rgba(79, 172, 254, 0.3);
+}
+
+.status-badge.payment-pending {
+    background: rgba(247, 112, 154, 0.15);
+    color: #fa709a;
+    border: 1px solid rgba(247, 112, 154, 0.3);
+}
+
+/* تحسين الأيقونات داخل الشارات */
+.status-badge i {
+    font-size: 0.9rem;
+    margin-right: 2px;
+}
+
+/* تجاوب للأجهزة المحمولة - التصميم المبسط */
+@media (max-width: 768px) {
+    .stats-grid-simplified {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .stat-card-modern {
+        padding: 20px;
+    }
+    
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .stat-content .stat-value {
+        font-size: 1.8rem;
+    }
+    
+    .quick-actions-simplified {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .status-overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-review-section {
+        padding: 20px;
+    }
+    
+    .review-buttons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .review-btn {
+        padding: 16px;
+    }
+    
+    .dashboard-container {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-card-modern {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stat-icon {
+        margin-bottom: 12px;
+    }
+    
+    .status-item-clean {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .review-btn {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .review-icon {
+        margin-bottom: 8px;
+    }
+    
+    .containers-filters {
+        flex-direction: column;
+    }
+    
+    .containers-filters input,
+    .containers-filters select {
+        min-width: 100%;
+    }
+    
+    /* تجاوب الأيقونات للأجهزة المحمولة */
+    .shipment-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    
+    .header-icons {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .status-icons {
+        gap: 6px;
+        padding: 3px 6px;
+    }
+    
+    .container-status-icons {
+        gap: 4px;
+        padding: 1px 4px;
+    }
+    
+    .container-info {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    
+    .customs-completed,
+    .customs-pending,
+    .payment-completed,
+    .payment-pending {
+        font-size: 1rem;
+    }
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.section-header h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    position: relative;
+}
+
+.section-header h3::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #374151;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+}
+
+.filter-btn:hover {
+    background: #f9fafb;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn.active {
+    background: #3b82f6;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
+}
+
+.filter-btn.active:hover {
+    background: #2563eb;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* تحسين شبكة الشحنات */
+.shipments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.shipment-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform-style: preserve-3d;
+}
+
+.shipment-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+    transform: translateX(-100%) translateY(-100%);
+    transition: transform 0.6s ease;
+}
+
+.shipment-card:hover::after {
+    transform: translateX(100%) translateY(100%);
+}
+
+.shipment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-secondary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.shipment-card:hover::before {
+    transform: scaleX(1);
+}
+
+.shipment-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(102, 126, 234, 0.2);
+}
+
+.shipment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.shipment-header h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.time-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    min-width: 80px;
+    animation: pulse 2s infinite;
+}
+
+.time-badge.urgent {
+    background: var(--gradient-danger);
+}
+
+.time-badge.soon {
+    background: var(--gradient-warning);
+}
+
+.time-badge.upcoming {
+    background: var(--gradient-secondary);
+}
+
+.time-badge.normal {
+    background: var(--gradient-success);
+}
+
+.time-badge.today {
+    background: var(--gradient-primary);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+    }
+}
+
+.arrival-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.arrival-date i {
+    color: var(--primary-color);
+}
+
+.shipment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.shipment-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.shipment-details strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.shipment-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.view-details-btn {
+    padding: 10px 20px;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+    flex: 1;
+    text-align: center;
+}
+
+.view-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* تحسين قسم حالة الشحنات */
+.shipment-status-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+    padding: 28px;
+    margin-bottom: 32px;
+    box-shadow: var(--box-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.status-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.status-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.status-card:hover::before {
+    transform: scaleX(1);
+}
+
+.status-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(102, 126, 234, 0.2);
+}
+
+.status-card.customs-status::before {
+    background: var(--gradient-secondary);
+}
+
+.status-card.payment-status::before {
+    background: var(--gradient-success);
+}
+
+.status-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.status-card-header i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.status-card.customs-status .status-card-header i {
+    color: var(--secondary-color);
+}
+
+.status-card.payment-status .status-card-header i {
+    color: var(--success-color);
+}
+
+.status-card-header h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.status-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.status-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 4px;
+    transition: width 0.8s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: progressShine 2s infinite;
+}
+
+@keyframes progressShine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.status-card.customs-status .progress-fill {
+    background: var(--gradient-secondary);
+}
+
+.status-card.payment-status .progress-fill {
+    background: var(--gradient-success);
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 40px;
+}
+
+/* البطاقة المميزة الكلاسيكية الفاخرة */
+.highlighted-card {
+    /* خلفية فاخرة بألوان كلاسيكية */
+    background: linear-gradient(145deg, 
+        #1B365D 0%, 
+        #2C4A6B 25%, 
+        #D4AF37 50%, 
+        #2C4A6B 75%, 
+        #1B365D 100%);
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--classic-gold);
+    box-shadow: 
+        0 12px 30px rgba(27, 54, 93, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.highlighted-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, 
+        rgba(212, 175, 55, 0.1) 0%, 
+        transparent 30%, 
+        rgba(212, 175, 55, 0.15) 50%, 
+        transparent 70%, 
+        rgba(212, 175, 55, 0.1) 100%);
+    animation: shimmer 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0%, 100% { 
+        opacity: 0.3;
+        transform: translateX(-100%);
+    }
+    50% { 
+        opacity: 0.8;
+        transform: translateX(100%);
+    }
+}
+
+.highlighted-card h3 {
+    color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.highlighted-card .stat-value {
+    background: none;
+    -webkit-text-fill-color: #FFFFFF;
+    color: #FFFFFF !important;
+    position: relative;
+    z-index: 2;
+    font-size: 2.8rem !important;
+    font-weight: 900;
+    text-shadow: 
+        3px 3px 6px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(212, 175, 55, 0.3);
+    letter-spacing: 1px;
+    /* إضافة حدود ذهبية للنص */
+    -webkit-text-stroke: 1px rgba(212, 175, 55, 0.3);
+}
+
+.highlighted-card .stat-details {
+    position: relative;
+    z-index: 2;
+    margin-top: 16px;
+}
+
+.highlighted-card .stat-details span {
+    background: rgba(27, 54, 93, 0.8);
+    color: #FFFFFF;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.highlighted-card .stat-details span:hover {
+    background: rgba(212, 175, 55, 0.9);
+    color: #1B365D;
+    text-shadow: none;
+    border-color: var(--classic-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+}
+
+/* تحسينات للجوال */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 16px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .stat-value {
+        font-size: 2rem;
+    }
+    
+    .shipments-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .shipment-card {
+        padding: 20px;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filter-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .status-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .status-card {
+        padding: 20px;
+    }
+    
+    .status-stats {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .stat-item {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-container {
+        padding: 12px;
+    }
+    
+    .stat-card,
+    .shipment-card,
+    .status-card {
+        padding: 16px;
+    }
+    
+    .stat-value {
+        font-size: 1.8rem;
+    }
+    
+    .shipment-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .time-badge {
+        align-self: flex-start;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+        border-radius: 20px;
+    }
+}
+
+/* تحسين التبويبات */
+.tabs {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    padding: 16px 20px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.tabs::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    border-radius: 0 0 2px 2px;
+}
+
+/* تبويبات كلاسيكية أنيقة */
+.tab-btn {
+    padding: 16px 28px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: var(--border-radius);
+    background: linear-gradient(145deg, #FFFFFF 0%, #F8F9FA 100%);
+    color: var(--classic-navy);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    font-family: 'tajawal', 'Times New Roman', serif;
+    letter-spacing: 0.3px;
+    box-shadow: 
+        0 4px 15px rgba(27, 54, 93, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.tab-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.tab-btn:hover::before,
+.tab-btn.active::before {
+    left: 0;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    color: #FFFFFF;
+    border-color: var(--classic-gold);
+    transform: translateY(-3px);
+    box-shadow: 
+        0 10px 30px rgba(27, 54, 93, 0.25),
+        0 0 20px rgba(212, 175, 55, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* تحسين الإشعارات */
+.notifications-trigger {
+    margin-left: auto;
+}
+
+.notifications-btn {
+    position: relative;
+    padding: 12px;
+    border: none;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.notifications-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.notifications-btn:hover::before {
+    transform: scale(1);
+}
+
+.notifications-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.notifications-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--gradient-danger);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+}
+
+.auth-section {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none !important;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e7ff;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+    background: #f8fafc;
+    color: var(--text-primary);
+}
+
+/* تصميم الأزرار الكلاسيكي الفاخر */
+button, .primary-btn, .secondary-btn {
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-family: 'tajawal', 'Times New Roman', serif;
+    box-shadow: 
+        0 4px 15px rgba(27, 54, 93, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    font-size: 1.1em;
+    padding: 14px 32px;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    margin: 6px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before, .primary-btn::before, .secondary-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+button:hover::before, .primary-btn:hover::before, .secondary-btn:hover::before {
+    transform: translateX(100%);
+}
+
+button:active, .primary-btn:active, .secondary-btn:active {
+    transform: scale(0.98);
+    box-shadow: 
+        0 2px 10px rgba(27, 54, 93, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.primary-btn, button.primary-btn {
+    background: var(--gradient-primary);
+    color: #FFFFFF;
+    border-color: var(--classic-navy);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.primary-btn:hover, button.primary-btn:hover {
+    background: linear-gradient(145deg, #0F2845 0%, #1B365D 50%, #2E4A6B 100%);
+    color: #FFFFFF;
+    border-color: var(--classic-gold);
+    box-shadow: 
+        0 6px 20px rgba(27, 54, 93, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.secondary-btn, button.secondary-btn {
+    background: var(--gradient-secondary);
+    color: var(--classic-navy);
+    border-color: var(--classic-gold);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.secondary-btn:hover, button.secondary-btn:hover {
+    background: linear-gradient(145deg, #C19B26 0%, #D4AF37 50%, #E6C757 100%);
+    color: var(--classic-navy);
+    border-color: var(--classic-navy);
+    box-shadow: 
+        0 6px 20px rgba(212, 175, 55, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+/* أزرار الحالات الكلاسيكية */
+button.success, .btn-success {
+    background: var(--gradient-success);
+    color: #FFFFFF;
+    border-color: var(--classic-emerald);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+button.success:hover, .btn-success:hover {
+    background: linear-gradient(145deg, #3BA666 0%, #50C878 50%, #66D28A 100%);
+    border-color: var(--classic-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(80, 200, 120, 0.25);
+}
+
+button.danger, .btn-danger {
+    background: var(--gradient-danger);
+    color: #FFFFFF;
+    border-color: var(--classic-burgundy);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+button.danger:hover, .btn-danger:hover {
+    background: linear-gradient(145deg, #66001A 0%, #800020 50%, #993366 100%);
+    border-color: var(--classic-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(128, 0, 32, 0.25);
+}
+
+button.warning, .btn-warning {
+    background: var(--gradient-warning);
+    color: var(--classic-navy);
+    border-color: #F4A261;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+button.warning:hover, .btn-warning:hover {
+    background: linear-gradient(145deg, #E0914C 0%, #F4A261 50%, #F6B074 100%);
+    border-color: var(--classic-navy);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(244, 162, 97, 0.25);
+}
+/* أزرار صغيرة */
+button.small, .btn-small {
+    font-size: 0.95em;
+    padding: 7px 16px;
+}
+/* أزرار دائرية للأيقونات فقط */
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    transition: var(--transition);
+    border: none;
+}
+.icon-btn:hover {
+    background: var(--primary-light);
+    color: #1e40af;
+    transform: scale(1.08);
+}
+
+/* تحسين الجداول */
+.table-container {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: auto;
+    margin: 20px 0;
+    max-width: 100vw;
+}
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: transparent;
+    font-size: 1.04em;
+}
+thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(90deg, var(--primary-color) 60%, var(--secondary-color) 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.08em;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+}
+tbody tr {
+    transition: background 0.2s, box-shadow 0.2s;
+}
+tbody tr:hover {
+    background: var(--primary-light);
+    box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+}
+td, th {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e0e7ff;
+    text-align: right;
+}
+@media (max-width: 900px) {
+    .stat-card, .timeline-product, .shipment-card {
+        padding: 14px 6px 10px 6px;
+        font-size: 0.98em;
+    }
+    .table-container {
+        padding: 0;
+        margin: 0;
+    }
+    table {
+        font-size: 0.95em;
+    }
+    td, th {
+        padding: 8px 4px;
+    }
+    /* إخفاء الأعمدة غير الضرورية في الجداول */
+    td.hide-mobile, th.hide-mobile {
+        display: none !important;
+    }
+}
+@media (max-width: 600px) {
+    .stat-card, .timeline-product, .shipment-card {
+        padding: 8px 2vw 6px 2vw;
+        font-size: 0.93em;
+}
+    .table-container {
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+    table {
+        font-size: 0.89em;
+        min-width: 600px;
+    }
+    td, th {
+        padding: 5px 2px;
+    }
+    /* إخفاء الأعمدة غير الضرورية في الجداول */
+    td.hide-mobile, th.hide-mobile {
+        display: none !important;
+    }
+    form, fieldset.form-section {
+        padding: 6px 1vw;
+    }
+    legend {
+        font-size: 0.98em;
+    }
+}
+
+/* تنسيق أزرار الإجراءات في الجدول */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.edit-btn, .delete-btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #1976D2;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* تنسيق الأرقام والتواريخ */
+.number-cell {
+    font-family: 'Courier New', monospace;
+    text-align: left;
+}
+
+.date-cell {
+    white-space: nowrap;
+}
+
+.status-cell {
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.status-pending {
+    color: var(--warning-color);
+}
+
+.status-shipped {
+    color: var(--success-color);
+}
+
+/* تحسينات للعرض على الأجهزة المحمولة */
+@media screen and (max-width: 768px) {
+    .table-container {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        min-width: 120px;
+    }
+
+    .action-buttons {
+        min-width: 140px;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: auto;
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    max-width: 600px;
+    width: 90%;
+    margin: 20px auto;
+    position: relative;
+    z-index: 2001;
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-content form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.modal-content .full-width {
+    grid-column: 1 / -1;
+}
+
+.modal-content input:focus,
+.modal-content select:focus,
+.modal-content textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 122, 123, 0.1);
+}
+
+.modal-content button[type="submit"] {
+    grid-column: 1 / -1;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #1f5c5d;
+    transform: translateY(-2px);
+}
+
+.close {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* تحسينات المودال للجوال */
+@media (max-width: 540px) {
+    .modal {
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    .modal-content {
+        width: 96vw;
+        max-width: 96vw;
+        margin: 12px auto;
+        padding: 16px;
+        border-radius: 12px;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+    .modal-content form {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .modal-content h2 {
+        font-size: 1.25rem;
+        margin-bottom: 16px;
+    }
+    .close {
+        top: 10px;
+        left: 12px;
+        font-size: 24px;
+    }
+}
+
+/* تحسينات قسم التحكم والبحث */
+.controls-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.search-filters, .search-container {
+    background: linear-gradient(90deg, #f0f4ff 60%, #f8fafc 100%);
+    padding: 18px 18px 10px 18px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(37,99,235,0.06);
+    margin-bottom: 18px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1.5px solid #e0e7ff;
+}
+.search-filters input, .search-filters select, .search-container input, .search-container select {
+    border-radius: 8px;
+    border: 2px solid #e0e7ff;
+    padding: 10px 14px;
+    font-size: 1.05em;
+    background: #fff;
+    color: var(--primary-color);
+    transition: border 0.2s, box-shadow 0.2s;
+    margin-bottom: 0;
+}
+.search-filters input:focus, .search-filters select:focus, .search-container input:focus, .search-container select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px #c7d2fe;
+    background: #f0f4ff;
+}
+@media (max-width: 900px) {
+    .search-filters, .search-container {
+        padding: 10px 4px 6px 4px;
+        gap: 8px;
+}
+    .search-filters input, .search-filters select, .search-container input, .search-container select {
+        font-size: 0.98em;
+        padding: 7px 7px;
+    }
+}
+@media (max-width: 600px) {
+    .search-filters, .search-container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 7px 2vw 4px 2vw;
+        gap: 6px;
+    }
+    .search-filters input, .search-filters select, .search-container input, .search-container select {
+        font-size: 0.95em;
+        padding: 6px 6px;
+    }
+}
+
+/* تحسين تجربة التنقل (Tabs) */
+.tabs {
+    display: flex;
+    gap: 10px;
+    background: #fff;
+    padding: 15px 10px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+    margin-bottom: 20px;
+    overflow-x: auto;
+    border: 1.5px solid #e0e7ff;
+}
+.tab-btn {
+    padding: 12px 28px;
+    border-radius: var(--border-radius);
+    background: #f1f5f9;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.08em;
+    border: none;
+    transition: var(--transition);
+    box-shadow: 0 1px 3px rgba(37,99,235,0.04);
+    margin-bottom: 0;
+    outline: none;
+}
+.tab-btn.active, .tab-btn:focus {
+    background: linear-gradient(90deg, var(--primary-color) 60%, var(--secondary-color) 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(37,99,235,0.13);
+    transform: scale(1.04);
+    border: none;
+}
+.tab-btn:hover:not(.active) {
+    background: #e0e7ff;
+    color: #2563eb;
+}
+@media (max-width: 600px) {
+    .tabs {
+        padding: 8px 2px;
+        gap: 4px;
+    }
+    .tab-btn {
+        padding: 8px 10px;
+        font-size: 0.98em;
+    }
+}
+
+/* تنسيقات المستندات الجديدة */
+.documents-upload {
+    grid-column: 1 / -1;
+    padding: 20px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.documents-upload label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.document-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    background: #f9f9f9;
+}
+
+.document-box:hover {
+    border-color: #4CAF50;
+    background: #f0f0f0;
+}
+
+.document-box i {
+    font-size: 32px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.document-box span {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.document-box .file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.document-box .upload-status {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.document-box.uploaded {
+    border-color: #4CAF50;
+}
+
+.document-box.uploaded i {
+    color: #4CAF50;
+}
+
+.document-box.error {
+    border-color: #f44336;
+}
+
+.document-box.error i {
+    color: #f44336;
+}
+
+@media screen and (max-width: 768px) {
+    .documents-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .documents-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* تنسيقات أيقونات الإجراءات */
+.action-icons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.icon-btn:hover {
+    background: var(--primary-light);
+    transform: scale(1.1);
+}
+
+.icon-btn.edit i {
+    color: #2196F3;
+}
+
+.icon-btn.delete i {
+    color: #f44336;
+}
+
+.icon-btn.view i {
+    color: #4CAF50;
+}
+
+/* تحسين مظهر تحميل الملفات */
+.upload-status {
+    font-size: 12px;
+    color: #666;
+    margin-left: 10px;
+}
+
+/* تنسيقات أيقونات المستندات في الجدول */
+.documents-cell {
+    min-width: 120px;
+}
+
+.document-icons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.document-icons i {
+    font-size: 20px;
+}
+
+.text-muted {
+    color: #ccc !important;
+}
+
+.document-icons a {
+    text-decoration: none;
+}
+
+.document-icons a:hover i {
+    transform: scale(1.1);
+}
+
+.document-icons .fa-file-invoice {
+    color: #4CAF50;
+}
+
+.document-icons .fa-certificate {
+    color: #2196F3;
+}
+
+.document-icons .fa-file-contract {
+    color: #ff9800;
+}
+
+.document-icons .fa-list-alt {
+    color: #9c27b0;
+}
+
+/* إضافة تلميح عند التحويم */
+.document-icons a {
+    position: relative;
+}
+
+.document-icons a:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+/* تنسيقات تفاصيل الشحنة */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.detail-group {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.detail-value {
+    color: #333;
+    font-size: 16px;
+}
+
+.documents-section {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.documents-section h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.document-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.document-link:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.document-link i {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.document-link .fa-file-invoice { color: #4CAF50; }
+.document-link .fa-certificate { color: #2196F3; }
+.document-link .fa-file-contract { color: #ff9800; }
+.document-link .fa-list-alt { color: #9c27b0; }
+
+@media screen and (max-width: 768px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* تحديث لوحة المعلومات */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 70px;
+}
+
+/* تحديث البطاقات الإحصائية */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card, .timeline-product, .shipment-card {
+    background: linear-gradient(135deg, #f0f4ff 0%, #fff 100%);
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 24px rgba(37,99,235,0.10), 0 1.5px 4px rgba(44,62,80,0.08);
+    border: 1.5px solid #e0e7ff;
+    padding: 28px 32px 22px 32px;
+    margin-bottom: 22px;
+    transition: box-shadow 0.3s, border 0.3s, transform 0.2s;
+    position: relative;
+}
+.stat-card:hover, .timeline-product:hover, .shipment-card:hover {
+    box-shadow: 0 12px 32px rgba(37,99,235,0.18), 0 2px 8px rgba(44,62,80,0.13);
+    border: 1.5px solid var(--primary-color);
+    transform: translateY(-4px) scale(1.02);
+}
+.stat-card h3, .timeline-product-title {
+    color: var(--primary-color);
+    font-size: 1.18rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.stat-value {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+    letter-spacing: 0.01em;
+}
+.stat-details {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #64748b;
+}
+@media (max-width: 900px) {
+    .stat-card, .timeline-product, .shipment-card {
+        padding: 14px 6px 10px 6px;
+        font-size: 0.98em;
+    }
+    .stat-card h3, .timeline-product-title {
+        font-size: 1em;
+    }
+    .stat-value {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 600px) {
+    .stat-card, .timeline-product, .shipment-card {
+        padding: 8px 2vw 6px 2vw;
+        font-size: 0.93em;
+    }
+    .stat-card h3, .timeline-product-title {
+        font-size: 0.98em;
+    }
+    .stat-value {
+        font-size: 1.1rem;
+    }
+}
+
+/* قسم الإشعارات والتنبيهات */
+.notifications-section {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+.notification-settings {
+    display: grid;
+    gap: 15px;
+}
+
+.setting-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.setting-item label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+.setting-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #4CAF50;
+}
+
+/* تحديث قسم الأنشطة الأخيرة */
+.recent-activities {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.activities-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.activity-icon.order { background: #4CAF50; }
+.activity-icon.shipment { background: #2196F3; }
+.activity-icon.inventory { background: #FF9800; }
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-time {
+    font-size: 12px;
+    color: #666;
+}
+
+/* تحديث جدول الشحنات القادمة */
+.upcoming-shipments {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.upcoming-shipments table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.upcoming-shipments th,
+.upcoming-shipments td {
+    padding: 12px;
+    text-align: right;
+    border-bottom: 1px solid #eee;
+}
+
+.upcoming-shipments th {
+    font-weight: 600;
+    color: #666;
+    background: #f8f9fa;
+}
+
+/* تنسيق أزرار الوصول السريع */
+.quick-actions {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.quick-actions button {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quick-actions button:hover {
+    transform: translateY(-2px);
+    background: #45a049;
+}
+
+/* تحسينات للشاشات المتوسطة */
+@media screen and (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shipments-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-actions {
+        flex-direction: row;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        justify-content: center;
+    }
+
+    .dashboard-container {
+        margin-bottom: 70px;
+    }
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shipments-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .notifications-header {
+        flex-direction: column;
+    }
+
+    .whatsapp-btn {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-actions button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .quick-actions i {
+        margin-right: 5px;
+    }
+}
+
+/* تحسينات للشاشات الصغيرة جداً */
+@media screen and (max-width: 480px) {
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-value {
+        font-size: 20px;
+    }
+
+    .detail-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .documents-status {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-actions {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .quick-actions button {
+        flex: 1;
+        min-width: 80px;
+    }
+}
+
+/* تحسينات لتجربة المستخدم */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+/* تحسينات للجداول */
+.table-container {
+    overflow: hidden;
+}
+
+#shipmentsTableBody tr {
+    transition: all 0.3s ease;
+}
+
+#shipmentsTableBody tr:hover {
+    background-color: #f5f5f5;
+    transform: translateX(-5px);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* تحسين أداء التحريك السلس */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* تحسين قابلية القراءة على الشاشات الصغيرة */
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* تحسين تنسيق قسم الشحنات القادمة */
+.upcoming-shipments-section {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* جعل بطاقات الشحنات القادمة تمتد بعرض القسم كاملاً */
+.upcoming-shipments-section .shipments-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* موبايل */
+    gap: 12px;
+}
+
+/* أعمدة استجابية لعرض عدد أكبر بشكل مرتب */
+@media (min-width: 480px) {
+    .upcoming-shipments-section .shipments-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (min-width: 768px) {
+    .upcoming-shipments-section .shipments-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media (min-width: 1024px) {
+    .upcoming-shipments-section .shipments-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* ضبط البطاقات لتكون مضغوطة وأنيقة للموبايل */
+.upcoming-shipments-section .shipment-card-new {
+    margin: 0;
+    padding: 14px;
+}
+.upcoming-shipments-section .company-name { font-size: 0.95rem; }
+.upcoming-shipments-section .shipment-id { font-size: 0.8rem; color: #64748b; }
+.upcoming-shipments-section .shipment-info-new { gap: 6px; }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.section-header h3 {
+    font-size: 1.2rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-header h3::before {
+    content: '\f0d1';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #4CAF50;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+    background: #f5f5f5;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #374151;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+}
+
+.filter-btn.active {
+    background: #3b82f6;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
+}
+
+/* تحديث تنسيق بطاقات الشحنات */
+.shipments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.shipment-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 4px solid #ddd;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.shipment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.shipment-card.urgent {
+    border-left-color: #e53e3e;
+    background-color: #fff5f5;
+}
+
+.shipment-card.soon {
+    border-left-color: #dd6b20;
+    background-color: #fffaf0;
+}
+
+.shipment-card.upcoming {
+    border-left-color: #3182ce;
+    background-color: #ebf8ff;
+}
+
+.shipment-card.normal {
+    border-left-color: #38a169;
+    background-color: #f0fff4;
+}
+
+.shipment-card.today {
+    border-left-color: #9c27b0;
+    background-color: #f3e5f5;
+}
+
+.shipment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.shipment-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+    flex: 1;
+}
+
+.time-badge {
+    background: #f8f9fa;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.time-badge.urgent {
+    background-color: #e53e3e;
+    color: white;
+}
+
+.time-badge.soon {
+    background-color: #dd6b20;
+    color: white;
+}
+
+.time-badge.upcoming {
+    background-color: #3182ce;
+    color: white;
+}
+
+.time-badge.normal {
+    background-color: #38a169;
+    color: white;
+}
+
+.time-badge.today {
+    background-color: #9c27b0;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.arrival-date {
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.arrival-date i {
+    opacity: 0.7;
+}
+
+.arrival-date.urgent {
+    color: #e53e3e;
+}
+
+.arrival-date.soon {
+    color: #dd6b20;
+}
+
+.arrival-date.upcoming {
+    color: #3182ce;
+}
+
+.arrival-date.normal {
+    color: #38a169;
+}
+
+.arrival-date.today {
+    color: #9c27b0;
+}
+
+.shipment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.shipment-details p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.shipment-details strong {
+    font-weight: 600;
+    color: #444;
+}
+
+.shipment-actions {
+    margin-top: auto;
+}
+
+.view-details-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.view-details-btn:hover {
+    background: #45a049;
+    transform: translateY(-1px);
+}
+
+/* تحسين أزرار التصفية */
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #374151;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+}
+
+.filter-btn:hover {
+    background: #f9fafb;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn.active {
+    background: #3b82f6;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
+}
+
+/* تحسينات الأقسام */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.section-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.search-container {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+#shipmentSearch {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px;
+}
+
+#filterStatus {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* تحسين مظهر حقل البحث والتصفية */
+.search-container {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.date-filter {
+    display: flex;
+    gap: 10px;
+}
+
+.date-filter input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 130px;
+}
+
+/* تنسيق النص المميز في نتائج البحث */
+mark {
+    background-color: #fff3cd;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+/* تنسيق عداد النتائج */
+.results-counter {
+    color: #666;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    background: #e9ecef;
+    border-radius: 4px;
+    margin-right: auto;
+}
+
+/* تحسين تجاوب العناصر على الشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .date-filter {
+        flex-direction: column;
+    }
+    
+    .date-filter input {
+        width: 100%;
+    }
+}
+
+/* تحسين شكل الإشعارات (Toasts) */
+.toast {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius);
+    padding: 18px 32px;
+    box-shadow: 0 8px 32px rgba(37,99,235,0.13), 0 2px 8px rgba(44,62,80,0.10);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    position: fixed;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.98);
+    z-index: 2000;
+    min-width: 320px;
+    max-width: 90vw;
+    font-size: 1.08em;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.toast::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-success);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.toast.show::before {
+    transform: scaleX(1);
+}
+.toast.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) scale(1);
+}
+.toast-success {
+    background: linear-gradient(90deg, #dcfce7 60%, #bbf7d0 100%);
+    color: #15803d;
+    border-left: 6px solid var(--success-color);
+}
+.toast-error {
+    background: linear-gradient(90deg, #fee2e2 60%, #fecaca 100%);
+    color: #b91c1c;
+    border-left: 6px solid var(--danger-color);
+}
+.toast-info {
+    background: linear-gradient(90deg, #e0e7ff 60%, #bae6fd 100%);
+    color: #2563eb;
+    border-left: 6px solid var(--primary-color);
+}
+.toast i {
+    font-size: 2em;
+    margin-left: 8px;
+    opacity: 0.85;
+}
+.toast-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #e0e7ff;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+}
+.toast-progress::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    animation: progress 3s linear forwards;
+}
+@keyframes progress {
+    to { width: 0%; }
+}
+@media (max-width: 600px) {
+    .toast {
+        min-width: 90vw;
+        padding: 12px 8px;
+        font-size: 0.98em;
+}
+    .toast i {
+        font-size: 1.3em;
+}
+}
+
+/* تحسينات الأجهزة الكبيرة (أجهزة سطح المكتب) */
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 20px;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .shipments-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .dashboard-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+    
+    .quick-actions {
+        right: 30px;
+    }
+}
+
+/* تحسينات للأجهزة المتوسطة (اللابتوب) */
+@media screen and (max-width: 1199px) {
+    body {
+        padding: 15px;
+        max-width: 100%;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .shipments-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .dashboard-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .modal-content {
+        width: 80%;
+        max-width: 800px;
+    }
+}
+
+/* تحسينات للأجهزة المتوسطة (التابلت) */
+@media screen and (max-width: 1024px) {
+    body {
+        padding: 12px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .shipments-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .dashboard-container {
+        margin-bottom: 70px;
+    }
+    
+    .quick-actions {
+        flex-direction: row;
+        bottom: 0;
+        top: auto;
+        right: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        justify-content: center;
+        z-index: 99;
+    }
+    
+    .quick-actions button {
+        margin: 0 5px;
+    }
+    
+    .section-header {
+        flex-wrap: wrap;
+    }
+    
+    .filter-buttons {
+        margin-top: 10px;
+    }
+}
+
+/* تحسينات للأجهزة الصغيرة (الهواتف الذكية بالاتجاه الأفقي) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .stat-value {
+        font-size: 1.5rem;
+    }
+    
+    .shipments-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .shipment-card {
+        padding: 15px;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .section-header h3 {
+        margin-bottom: 10px;
+    }
+    
+    .filter-buttons {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 8px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .filter-btn {
+        flex-shrink: 0;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 15px auto;
+        padding: 15px;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* تحسين عرض أزرار الإجراءات في الجداول */
+    .action-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    /* تحسين عرض أزرار الشريط العلوي */
+    .tab-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+    
+    /* تحسين النماذج */
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-group {
+        width: 100%;
+    }
+    
+    .time-badge {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    
+    .arrival-date {
+        font-size: 0.85rem;
+    }
+}
+
+/* تحسينات للأجهزة الصغيرة جداً (الهواتف الذكية بالاتجاه العمودي) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .stat-card {
+        padding: 12px;
+    }
+    
+    .shipment-card {
+        padding: 12px;
+    }
+    
+    .shipment-header h4 {
+        font-size: 1rem;
+    }
+    
+    .shipment-details {
+        padding: 10px;
+    }
+    
+    .view-details-btn {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .modal-content {
+        padding: 12px;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+    
+    .form-label {
+        font-size: 0.9rem;
+    }
+    
+    input, select, textarea {
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    .search-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .date-filter {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .date-filter input {
+        width: 100%;
+    }
+    
+    /* تحسين جداول البيانات */
+    table {
+        font-size: 12px;
+    }
+    
+    td, th {
+        padding: 8px 6px;
+    }
+    
+    /* تحسين الإشعارات */
+    .toast {
+        max-width: 90%;
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+/* تنسيقات حالة الشحنة */
+.status-section {
+    grid-column: 1 / -1;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    border: 1px solid #e9ecef;
+}
+
+.status-section h4 {
+    color: #2a7a7b;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-section h4::before {
+    content: '\f0c9';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #2a7a7b;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.status-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e7ff;
+    transition: all 0.3s ease;
+}
+
+.status-item:hover {
+    border-color: #2a7a7b;
+    box-shadow: 0 2px 8px rgba(42, 122, 123, 0.1);
+}
+
+.status-item label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+}
+
+.status-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #2a7a7b;
+    cursor: pointer;
+}
+
+.status-item input[type="date"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.status-item input[type="date"]:focus {
+    border-color: #2a7a7b;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(42, 122, 123, 0.1);
+}
+
+.status-item.completed {
+    background: #e8f5e9;
+    border-color: #4caf50;
+}
+
+.status-item.completed label {
+    color: #2e7d32;
+}
+
+.status-item.pending {
+    background: #fff3e0;
+    border-color: #ff9800;
+}
+
+.status-item.pending label {
+    color: #e65100;
+}
+
+/* تنسيقات حالة الشحنة في الجدول */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.customs-released {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-badge.customs-pending {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.status-badge.payment-completed {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.status-badge.payment-pending {
+    background: #fce4ec;
+    color: #c2185b;
+}
+
+/* تنسيقات قسم حالة الشحنات */
+.shipment-status-section {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.status-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.status-filter-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background: #f1f1f1;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.status-filter-btn:hover {
+    background: #e0e0e0;
+}
+
+.status-filter-btn.active {
+    background: #2a7a7b;
+    color: white;
+}
+
+.status-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.status-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.status-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.status-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2a7a7b, #4caf50);
+}
+
+.status-card.customs-status::before {
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+}
+
+.status-card.payment-status::before {
+    background: linear-gradient(90deg, #2196f3, #3f51b5);
+}
+
+.status-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.status-card-header i {
+    font-size: 1.5rem;
+    color: #2a7a7b;
+}
+
+.status-card.customs-status .status-card-header i {
+    color: #ff9800;
+}
+
+.status-card.payment-status .status-card-header i {
+    color: #2196f3;
+}
+
+.status-card-header h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.status-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2a7a7b;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.status-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2a7a7b, #4caf50);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.status-card.customs-status .progress-fill {
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+}
+
+.status-card.payment-status .progress-fill {
+    background: linear-gradient(90deg, #2196f3, #3f51b5);
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2a7a7b;
+    min-width: 40px;
+}
+
+.shipments-by-status {
+    margin-top: 25px;
+}
+
+.status-group {
+    margin-bottom: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #e9ecef;
+}
+
+.status-group h5 {
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-group h5 i {
+    color: #2a7a7b;
+}
+
+.status-group h5 i.fa-check-circle {
+    color: #4caf50;
+}
+
+.status-group h5 i.fa-clock {
+    color: #ff9800;
+}
+
+.shipments-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+.shipment-status-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #e0e7ff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.shipment-status-item:hover {
+    border-color: #2a7a7b;
+    box-shadow: 0 2px 8px rgba(42, 122, 123, 0.1);
+    transform: translateY(-1px);
+}
+
+.shipment-status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.shipment-number {
+    font-weight: 600;
+    color: #2a7a7b;
+    font-size: 0.95rem;
+}
+
+.shipment-date {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.shipment-details {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.shipment-details strong {
+    color: #333;
+}
+
+/* تنسيقات إضافية للعناصر الجديدة */
+.no-shipments {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px dashed #ddd;
+}
+
+/* تحسينات للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .status-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .status-card {
+        padding: 15px;
+    }
+    
+    .status-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .stat-item {
+        text-align: center;
+    }
+    
+    .shipments-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .shipment-status-item {
+        padding: 10px;
+    }
+    
+    .shipment-status-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .status-filters {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .status-filter-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .status-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .status-card-header h4 {
+        font-size: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.4rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* تحسينات للهواتف الصغيرة جداً */
+@media screen and (max-width: 320px) {
+    .section-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        border-radius: 18px;
+    }
+    
+    .shipment-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .time-badge {
+        align-self: flex-start;
+    }
+    
+    .stat-title {
+        font-size: 0.9rem;
+    }
+    
+    .action-buttons button {
+        width: 100%;
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+/* تحسينات الدعم لأوضاع الشاشة المختلفة (عمودي/أفقي) */
+@media screen and (orientation: portrait) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 812px) {
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .shipments-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* تحسينات الطباعة */
+@media print {
+    .tabs, .quick-actions, .filter-buttons, .search-container {
+        display: none !important;
+    }
+    
+    body {
+        padding: 0;
+        background: white;
+    }
+    
+    .dashboard-container, .tab-content {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .view-details-btn {
+        display: none;
+    }
+    
+    .shipment-card {
+        break-inside: avoid;
+    }
+}
+
+/* تنسيقات التصميم المحمول الجديد */
+
+/* الشريط العلوي للموبايل */
+.mobile-header {
+    display: none;
+    background: #ffffff;
+    padding: 12px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #374151;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.page-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+/* الشريط الجانبي */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1f2937;
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.sidebar-nav {
+    padding: 20px 0;
+}
+
+.sidebar-btn {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    background: none;
+    text-align: right;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #374151;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.sidebar-btn:hover,
+.sidebar-btn.active {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+.sidebar-btn i {
+    font-size: 1.1rem;
+    width: 20px;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* بطاقات الإحصائيات */
+.stats-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat-card-mobile {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3b82f6;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-title {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* رؤوس الأقسام المحمولة */
+.section-header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.section-header-mobile h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+.filter-icon-btn {
+    background: #f3f4f6;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-icon-btn:hover {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+/* قسم التوصيات الذكية */
+.smart-recommendations-section {
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.recommendations-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.recommendation-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.recommendation-content {
+    flex: 1;
+}
+
+.recommendation-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 8px 0;
+}
+
+.recommendation-content p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.recommendation-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.recommendation-btn {
+    background: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.recommendation-btn:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* شريط التنقل السفلي */
+.bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #6b7280;
+    font-size: 0.75rem;
+}
+
+.nav-item i {
+    font-size: 1.2rem;
+}
+
+.nav-item.active {
+    color: #3b82f6;
+}
+
+.nav-item:hover {
+    color: #3b82f6;
+}
+
+/* إخفاء التبويبات على الأجهزة الكبيرة */
+.desktop-only {
+    display: flex;
+}
+
+/* إضافة مساحة أسفل جميع التبويبات لشريط التنقل السفلي */
+.tab-content {
+    margin-bottom: 80px;
+}
+
+/* إضافة مساحة إضافية للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .tab-content {
+        margin-bottom: 80px;
+    }
+}
+
+/* عرض رأس الموبايل وإخفاء العناصر المكتبية على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .mobile-header { display: flex; }
+    .desktop-only { display: none; }
+}
+
+/* تنسيقات خاصة للأجهزة الكبيرة */
+@media (min-width: 769px) {
+    .bottom-navigation {
+        padding: 12px 0;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .nav-item {
+        padding: 12px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .nav-item i {
+        font-size: 1.4rem;
+    }
+    
+    .tab-content {
+        margin-bottom: 90px;
+    }
+}
+
+/* تنسيقات البطاقات الجديدة للشحنات القادمة */
+.shipment-card-new {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid #e5e7eb;
+    min-height: 200px;
+}
+
+.shipment-card-new:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    border-color: #d1d5db;
+}
+
+.shipment-header-new {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.company-info {
+    flex: 1;
+}
+
+.company-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+}
+
+.shipment-id {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0;
+    font-weight: 500;
+}
+
+.status-badge-new {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #374151;
+    background: #fef3c7;
+    border: 1px solid #fbbf24;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+.status-badge-new.urgent {
+    background: #fee2e2;
+    color: #dc2626;
+    border-color: #f87171;
+}
+
+.status-badge-new.soon {
+    background: #fed7aa;
+    color: #ea580c;
+    border-color: #fb923c;
+}
+
+.status-badge-new.upcoming {
+    background: #dbeafe;
+    color: #2563eb;
+    border-color: #60a5fa;
+}
+
+.status-badge-new.normal {
+    background: #dcfce7;
+    color: #16a34a;
+    border-color: #4ade80;
+}
+
+.status-badge-new.today {
+    background: #f3e8ff;
+    color: #9333ea;
+    border-color: #a78bfa;
+}
+
+.shipment-info-new {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.9rem;
+}
+
+.info-value {
+    color: #6b7280;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.shipment-actions-new {
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.view-details-btn-new {
+    width: 100%;
+    padding: 12px 16px;
+    background: #f3f4f6;
+    color: #374151;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #d1d5db;
+}
+
+.view-details-btn-new:hover {
+    background: #e5e7eb;
+    color: #1f2937;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* تنسيقات متجاوبة للبطاقات الجديدة */
+@media (max-width: 768px) {
+    .shipment-card-new {
+        padding: 16px;
+        min-height: 180px;
+    }
+    
+    .company-name {
+        font-size: 1rem;
+    }
+    
+    .shipment-id {
+        font-size: 0.85rem;
+    }
+    
+    .status-badge-new {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+    
+    .info-label,
+    .info-value {
+        font-size: 0.85rem;
+    }
+    
+    .view-details-btn-new {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .shipment-card-new {
+        padding: 12px;
+        min-height: 160px;
+        gap: 12px;
+    }
+    
+    .company-name {
+        font-size: 0.95rem;
+    }
+    
+    .shipment-id {
+        font-size: 0.8rem;
+    }
+    
+    .status-badge-new {
+        padding: 3px 6px;
+        font-size: 0.7rem;
+    }
+    
+    .info-item {
+        padding: 2px 0;
+    }
+    
+    .info-label,
+    .info-value {
+        font-size: 0.8rem;
+    }
+    
+    .view-details-btn-new {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* التنسيقات المتجاوبة للتصميم المحمول */
+@media (max-width: 768px) {
+    /* إظهار العناصر المحمولة وإخفاء العناصر المكتبية */
+    .mobile-header {
+        display: flex;
+    }
+    
+    .desktop-only {
+        display: none !important;
+    }
+    
+    
+    .dashboard-container {
+        padding: 16px;
+        margin-top: 0;
+    }
+    
+    /* تعديل التخطيط العام */
+    body {
+        padding: 0;
+        background: #f8fafc;
+    }
+    
+    .tab-content {
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* إخفاء الأقسام المعقدة على الموبايل */
+    .container-value-section-enhanced,
+    .quick-review-section-enhanced,
+    .stats-grid-simplified,
+    .shipment-status-simplified,
+    .quick-actions-simplified {
+        display: none !important;
+    }
+    
+    /* تعديل بطاقات الإحصائيات */
+    .stats-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .stat-card-mobile {
+        padding: 16px;
+    }
+    
+    .stat-title {
+        font-size: 0.8rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    /* تعديل قسم الشحنات القادمة */
+    .upcoming-shipments-section {
+        margin-bottom: 20px;
+    }
+    
+    .section-header-mobile h3 {
+        font-size: 1.1rem;
+    }
+    
+    .filter-buttons {
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .shipments-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    /* تعديل بطاقات التوصيات */
+    .recommendation-card {
+        padding: 16px;
+        gap: 12px;
+    }
+    
+    .recommendation-content h4 {
+        font-size: 1rem;
+    }
+    
+    .recommendation-content p {
+        font-size: 0.85rem;
+    }
+    
+    .recommendation-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    /* تعديل البطاقات الجديدة للشحنات */
+    .shipment-card-new {
+        padding: 16px;
+        min-height: 180px;
+    }
+    
+    .company-name {
+        font-size: 1rem;
+    }
+    
+    .shipment-id {
+        font-size: 0.85rem;
+    }
+    
+    .status-badge-new {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+    
+    .info-label,
+    .info-value {
+        font-size: 0.85rem;
+    }
+    
+    .view-details-btn-new {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-header {
+        padding: 10px 12px;
+    }
+    
+    .page-title {
+        font-size: 1.1rem;
+    }
+    
+    .dashboard-container {
+        padding: 12px;
+    }
+    
+    .stats-cards-grid {
+        gap: 10px;
+    }
+    
+    .stat-card-mobile {
+        padding: 14px;
+    }
+    
+    .stat-number {
+        font-size: 1.6rem;
+    }
+    
+    .recommendation-card {
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .recommendation-content h4 {
+        font-size: 0.9rem;
+    }
+    
+    .recommendation-content p {
+        font-size: 0.8rem;
+    }
+    
+    .recommendation-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .shipment-card-new {
+        padding: 12px;
+        min-height: 160px;
+        gap: 12px;
+    }
+    
+    .company-name {
+        font-size: 0.95rem;
+    }
+    
+    .shipment-id {
+        font-size: 0.8rem;
+    }
+    
+    .status-badge-new {
+        padding: 3px 6px;
+        font-size: 0.7rem;
+    }
+    
+    .info-item {
+        padding: 2px 0;
+    }
+    
+    .info-label,
+    .info-value {
+        font-size: 0.8rem;
+    }
+    
+    .view-details-btn-new {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        border-radius: 18px;
+    }
+    
+    .nav-item {
+        padding: 6px 8px;
+        font-size: 0.7rem;
+    }
+    
+    .nav-item i {
+        font-size: 1.1rem;
+    }
+}
+
+/* تنسيق للبطاقة المميزة للقيمة الإجمالية للحاويات */
+.highlighted-card {
+    border: 1px solid #3f51b5;
+    background-color: #f0f4ff;
+    box-shadow: 0 4px 8px rgba(63, 81, 181, 0.15);
+}
+
+.highlighted-card h3 {
+    color: #3f51b5;
+}
+
+.highlighted-card .stat-value {
+    color: #304ffe;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.highlighted-card .stat-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.highlighted-card .stat-details span {
+    background-color: rgba(63, 81, 181, 0.1);
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+/* تحسين عرض حقول الحاويات في نموذج المنتج الموسمي */
+.container-grid-wrapper {
+    margin-bottom: 15px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 14px;
+    background: #f7fafd;
+    padding: 14px 10px 8px 10px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 2px 8px rgba(42,122,123,0.07);
+}
+.container-grid-header,
+.container-grid-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 0.7fr; /* تاريخ الحاوية | كمية | رقم مرجعي | الحالة | رقم */
+    gap: 10px;
+    text-align: center;
+}
+.container-grid-row:hover {
+    box-shadow: 0 2px 8px rgba(42,122,123,0.10);
+    background: #f0f7fa;
+}
+.container-grid-row input,
+.container-grid-row select {
+    font-size: 1em;
+    padding: 7px 8px;
+    border-radius: 6px;
+    border: 1.2px solid #d0d0d0;
+    background: #f9f9f9;
+    text-align: center;
+    transition: border 0.2s;
+}
+.container-grid-row input:focus,
+.container-grid-row select:focus {
+    border: 1.5px solid #2a7a7b;
+    background: #fff;
+}
+.container-grid-row span {
+    display: inline-block;
+    font-weight: bold;
+    color: #2196F3;
+    background: #e3f2fd;
+    border-radius: 5px;
+    padding: 4px 8px;
+    min-width: 28px;
+    text-align: center;
+}
+@media (max-width: 600px) {
+  .container-grid-header, .container-grid-row {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    font-size: 0.95em;
+    gap: 5px;
+  }
+  .container-grid-wrapper {
+    max-width: 100%;
+    padding: 6px 2px 2px 2px;
+  }
+}
+
+/* نافذة نموذج المنتج الموسمي بكامل الشاشة */
+#seasonalProductModal .modal-content.improved-modal {
+    max-width: 98vw !important;
+    width: 98vw !important;
+    min-width: 320px;
+    min-height: 90vh;
+    padding: 40px 30px 30px 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(44,62,80,0.18), 0 2px 8px rgba(44,62,80,0.10);
+    background: #fff;
+    margin: 2vh auto;
+    overflow-x: auto;
+}
+
+/* توسيع جدول الحاويات وتكبير الحقول والرؤوس */
+.container-grid-wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 18px 12px 8px 12px;
+}
+.container-grid-header, .container-grid-row {
+    grid-template-columns: 2.2fr 1.2fr 1.2fr 1.2fr 0.8fr;
+    font-size: 1.15em;
+    gap: 18px;
+}
+.container-grid-header {
+    background: #e8f5e9;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+}
+.container-grid-row {
+    margin-bottom: 12px;
+    padding: 10px 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(42,122,123,0.06);
+}
+.container-grid-row input,
+.container-grid-row select {
+    font-size: 1.1em;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+.container-grid-row span {
+    font-size: 1.1em;
+    min-width: 38px;
+    padding: 7px 12px;
+}
+@media (max-width: 900px) {
+  #seasonalProductModal .modal-content.improved-modal {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding: 10px 2vw;
+  }
+  .container-grid-header, .container-grid-row {
+    font-size: 1em;
+    gap: 7px;
+  }
+}
+
+/* تحسين مظهر بطاقات الجدول الزمني للمنتجات */
+.timeline-product {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.timeline-product:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: #2a7a7b;
+}
+
+.timeline-product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.timeline-product-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2a7a7b;
+}
+
+.product-specs {
+    font-size: 0.9rem;
+    color: #666;
+    margin-right: 8px;
+    font-weight: normal;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    color: #2a7a7b;
+    font-weight: bold;
+    margin-right: 12px;
+    background: #e8f5e9;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.timeline-product-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.timeline-product-actions button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.timeline-product-actions .edit-btn {
+    background: #2196F3;
+    color: #fff;
+}
+
+.timeline-product-actions .delete-btn {
+    background: #f44336;
+    color: #fff;
+}
+
+.timeline-product-actions button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.timeline-containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.timeline-container {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.timeline-container.pending {
+    border-right: 4px solid #ffc107;
+}
+
+.timeline-container.shipped {
+    border-right: 4px solid #2196F3;
+}
+
+.timeline-container.received {
+    border-right: 4px solid #4CAF50;
+}
+
+.timeline-container.cancelled {
+    border-right: 4px solid #f44336;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.container-date {
+    font-weight: bold;
+    color: #2a7a7b;
+}
+
+.container-status {
+    font-size: 0.9rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: #e9ecef;
+}
+
+.container-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.timeline-product-notes {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.loading-message,
+.no-data-message,
+.error-message {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.error-message {
+    color: #f44336;
+}
+
+@media (max-width: 768px) {
+    .timeline-product-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .timeline-product-actions {
+        width: 100%;
+    }
+
+    .timeline-product-actions button {
+        flex: 1;
+    }
+
+    .timeline-containers {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* تمييز العناصر المتأخرة (التصعيد) */
+.escalated {
+    background: #fff3cd !important;
+    border-color: #ff9800 !important;
+    color: #b26a00 !important;
+    position: relative;
+}
+.escalated::before {
+    content: '\26A0'; /* رمز تحذير */
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    font-size: 1.3em;
+    color: #ff9800;
+    z-index: 2;
+}
+
+/* تمييز الصفوف التي لديها مهام غير منجزة */
+tr.has-pending-task, .has-pending-task {
+    background: #fffbe7 !important;
+    color: #b26a00 !important;
+}
+.pending-task-icon {
+    font-size: 1.1em;
+    margin-right: 4px;
+    color: #ff9800;
+    vertical-align: middle;
+}
+
+/* أزرار إرسال الرسائل */
+.send-whatsapp-btn, .send-wechat-btn {
+    background: linear-gradient(135deg, #25D366, #075E54);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin: 2px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.send-wechat-btn {
+    background: linear-gradient(135deg, #07C160, #00A854);
+}
+
+.send-whatsapp-btn:hover {
+    background: linear-gradient(135deg, #128C7E, #25D366);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.send-wechat-btn:hover {
+    background: linear-gradient(135deg, #00A854, #07C160);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(7, 193, 96, 0.3);
+}
+
+.shipment-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* زر حذف البيانات المتكررة */
+.secondary-btn {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.secondary-btn:hover {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+/* تحسين أزرار التعديل والحذف لشركات التخليص */
+.edit-btn, .delete-btn {
+    padding: 6px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.edit-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.edit-btn:hover {
+    background: linear-gradient(135deg, #2980b9, #21618C);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(52, 152, 219, 0.3);
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #c0392b, #A93226);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(231, 76, 60, 0.3);
+}
+
+/* تحسين نموذج شركات التخليص */
+.form-group label {
+    font-size: 0.9rem;
+    color: #2a7a7b;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input[type="url"] {
+    font-size: 0.85rem;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="url"]:focus {
+    border-color: #2a7a7b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 122, 123, 0.1);
+}
+
+/* تحسين عرض الجداول للروابط */
+.clearanceCompaniesTableBody td {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.4;
+    vertical-align: top;
+}
+
+/* أيقونات WhatsApp و WeChat في الجدول */
+.whatsapp-icon {
+    color: #25D366;
+    margin-right: 5px;
+}
+
+.wechat-icon {
+    color: #07C160;
+    margin-right: 5px;
+}
+
+/* تحسين القائمة المنسدلة لشركات الشحن */
+#shippingCompany {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#shippingCompany:focus {
+    border-color: #2a7a7b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 122, 123, 0.1);
+}
+
+#shippingCompany option {
+    padding: 8px;
+}
+
+/* تحسين تنسيق فلاتر الشحنات */
+.filters-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.filters-row select {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    color: #2a7a7b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 160px;
+}
+
+.filters-row select:focus {
+    border-color: #2a7a7b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 122, 123, 0.1);
+}
+
+.filters-row select:hover {
+    border-color: #2a7a7b;
+    background: #f8f9fa;
+}
+
+/* زر إعادة تعيين الفلاتر */
+.reset-filters-btn {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.reset-filters-btn:hover {
+    background: linear-gradient(135deg, #495057, #343a40);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(108, 117, 125, 0.3);
+}
+
+.reset-filters-btn i {
+    font-size: 0.8rem;
+}
+
+/* مؤشر الفلاتر النشطة */
+.reset-filters-btn.filters-active {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    animation: pulse-glow 2s infinite;
+    position: relative;
+}
+
+.reset-filters-btn.filters-active::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    background: #dc3545;
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 3px 8px rgba(40, 167, 69, 0.3);
+    }
+    50% {
+        box-shadow: 0 3px 15px rgba(40, 167, 69, 0.6);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* تحسين عرض عداد النتائج */
+.results-counter {
+    background: linear-gradient(135deg, #e8f5e8, #d4edda);
+    color: #2a7a7b;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid rgba(42, 122, 123, 0.2);
+}
+
+/* تحسين responsive للفلاتر */
+@media (max-width: 768px) {
+    .filters-row {
+        flex-direction: column;
+    }
+    
+    .filters-row select {
+        min-width: 100%;
+    }
+    
+    .reset-filters-btn {
+        width: 100%;
+        justify-content: center;
+        margin-top: 8px;
+    }
+    
+    .search-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .date-filter {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* تنسيقات خاصة لنموذج الشحنات الجديد */
+.modal-content form input[type="text"],
+.modal-content form input[type="number"],
+.modal-content form input[type="date"],
+.modal-content form select,
+.modal-content form textarea {
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.modal-content form input[type="text"]:focus,
+.modal-content form input[type="number"]:focus,
+.modal-content form input[type="date"]:focus,
+.modal-content form select:focus,
+.modal-content form textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    outline: none;
+}
+
+.modal-content form input[readonly] {
+    background-color: #f9fafb;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+/* تنسيقات الحقول المطلوبة */
+.modal-content form input[required],
+.modal-content form select[required] {
+    border-left: 4px solid #3b82f6;
+}
+
+/* تنسيقات منطقة المستندات */
+.documents-upload {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+}
+
+.documents-upload label {
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.document-box {
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: #f9fafb;
+}
+
+.document-box:hover {
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.document-box.uploaded {
+    border-color: #10b981;
+    background: #ecfdf5;
+}
+
+.document-box.error {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.document-box i {
+    font-size: 24px;
+    color: #6b7280;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.document-box.uploaded i {
+    color: #10b981;
+}
+
+.document-box.error i {
+    color: #ef4444;
+}
+
+.document-box span {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.file-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.upload-status {
+    font-size: 12px;
+    margin-top: 8px;
+    min-height: 16px;
+}
+
+/* تنسيقات زر الحفظ */
+#submitShipment {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+#submitShipment:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* تنسيقات إضافية للجدول الجديد */
+#shipmentsTable {
+    font-size: 13px;
+}
+
+#shipmentsTable th {
+    padding: 12px 8px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+#shipmentsTable td {
+    padding: 10px 8px;
+    vertical-align: middle;
+}
+
+/* تنسيقات شارات الحالة الجديدة */
+.status-badge.customs-rejected {
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.status-badge.payment-pending {
+    background: #fef3c7;
+    color: #d97706;
+    border: 1px solid #fed7aa;
+}
+
+.customs-rejected {
+    color: #dc2626;
+}
+
+.payment-pending {
+    color: #d97706;
+}
+
+/* تنسيقات الاستجابة للجدول الجديد */
+@media (max-width: 1200px) {
+    #shipmentsTable {
+        font-size: 12px;
+    }
+    
+    #shipmentsTable th,
+    #shipmentsTable td {
+        padding: 8px 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .documents-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+    }
+    
+    .document-box {
+        padding: 12px;
+    }
+    
+    .modal-content form input[type="text"],
+    .modal-content form input[type="number"],
+    .modal-content form input[type="date"],
+    .modal-content form select,
+    .modal-content form textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+/* ===== تصميم جديد لتبويب الشحنات ===== */
+
+/* Header Section */
+.shipments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.shipments-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.add-shipment-btn {
+    background: #1e88e5; /* أزرق صريح كما في الصورة */
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(30, 136, 229, 0.28);
+    transition: transform .16s ease, box-shadow .16s ease, filter .16s ease;
+}
+
+.add-shipment-btn i { color: #fff; }
+
+.add-shipment-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+    box-shadow: 0 10px 22px rgba(30, 136, 229, 0.34);
+}
+
+/* Search Container */
+.shipments-search-container {
+    padding: 16px 20px;
+    background: #ffffff;
+}
+
+.search-bar {
+    position: relative;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    font-size: 16px;
+}
+
+#shipmentSearch {
+    width: 100%;
+    padding: 14px 16px 14px 48px;
+    border: none;
+    border-radius: 12px;
+    background: #f8f9fa;
+    font-size: 16px;
+    color: #1a1a1a;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#shipmentSearch:focus {
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+#shipmentSearch::placeholder {
+    color: #9ca3af;
+}
+
+/* Filter Tabs */
+.filter-tabs {
+    display: flex;
+    padding: 0 20px 16px;
+    gap: 8px;
+    overflow-x: auto;
+    background: #ffffff;
+}
+
+.filter-tab {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 20px;
+    background: #f3f4f6;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: fit-content;
+}
+
+.filter-tab.active {
+    background: #3b82f6;
+    color: white;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.filter-tab:hover:not(.active) {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+/* Advanced Filters */
+.advanced-filters {
+    padding: 16px 20px;
+    background: #ffffff;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Shipments Cards Container */
+.shipments-cards-container {
+    padding: 0 20px 20px;
+    background: #f8f9fa;
+    min-height: 400px;
+}
+
+/* Shipment Card */
+.shipment-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.shipment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.shipment-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.shipment-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 4px 0;
+}
+
+.shipment-id {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.shipment-status-badges {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.status-badge.paid {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.unpaid {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.status-badge.warning {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.shipment-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.detail-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.detail-value {
+    font-size: 14px;
+    color: #374151;
+    font-weight: 600;
+}
+
+.shipment-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shipment-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-indicator.in-transit {
+    background: #10b981;
+}
+
+.status-indicator.customs-hold {
+    background: #ef4444;
+}
+
+.status-indicator.at-port {
+    background: #3b82f6;
+}
+
+.status-indicator.delayed {
+    background: #f59e0b;
+}
+
+.status-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.view-details-btn {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
+}
+
+.view-details-btn:hover {
+    color: #1d4ed8;
+}
+
+.view-details-btn i {
+    font-size: 12px;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6b7280;
+}
+
+.empty-state i {
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: #d1d5db;
+}
+
+.empty-state h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #374151;
+}
+
+.empty-state p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Loading State */
+.loading-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .shipments-header {
+        padding: 16px;
+    }
+    
+    .shipments-title {
+        font-size: 20px;
+    }
+    
+    .add-shipment-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+    }
+    
+    .shipments-search-container,
+    .shipments-cards-container {
+        padding: 0 16px 16px;
+    }
+    
+    .filter-tabs {
+        padding: 0 16px 16px;
+    }
+    
+    .shipment-card {
+        padding: 16px;
+    }
+    
+    .shipment-title {
+        font-size: 16px;
+    }
+    
+    .shipment-details {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .shipment-details {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .shipment-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .shipment-status-badges {
+        align-self: flex-end;
+    }
+}

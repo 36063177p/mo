@@ -1,0 +1,580 @@
+/* ===== تحسينات UX/UI المتقدمة ===== */
+
+/* ===== نظام الألوان المحسّن ===== */
+:root {
+  /* ألوان أساسية محسّنة */
+  --color-primary-50: #E3F2FD;
+  --color-primary-100: #BBDEFB;
+  --color-primary-200: #90CAF9;
+  --color-primary-300: #64B5F6;
+  --color-primary-400: #42A5F5;
+  --color-primary-500: #2196F3;
+  --color-primary-600: #1E88E5;
+  --color-primary-700: #1976D2;
+  --color-primary-800: #1565C0;
+  --color-primary-900: #0D47A1;
+  
+  /* ألوان ثانوية */
+  --color-secondary-50: #F3E5F5;
+  --color-secondary-100: #E1BEE7;
+  --color-secondary-200: #CE93D8;
+  --color-secondary-300: #BA68C8;
+  --color-secondary-400: #AB47BC;
+  --color-secondary-500: #9C27B0;
+  --color-secondary-600: #8E24AA;
+  --color-secondary-700: #7B1FA2;
+  --color-secondary-800: #6A1B9A;
+  --color-secondary-900: #4A148C;
+  
+  /* ألوان النجاح */
+  --color-success-50: #E8F5E9;
+  --color-success-100: #C8E6C9;
+  --color-success-500: #4CAF50;
+  --color-success-700: #388E3C;
+  
+  /* ألوان التحذير */
+  --color-warning-50: #FFF3E0;
+  --color-warning-100: #FFE0B2;
+  --color-warning-500: #FF9800;
+  --color-warning-700: #F57C00;
+  
+  /* ألوان الخطر */
+  --color-error-50: #FFEBEE;
+  --color-error-100: #FFCDD2;
+  --color-error-500: #F44336;
+  --color-error-700: #D32F2F;
+  
+  /* ألوان محايدة */
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #EEEEEE;
+  --color-gray-300: #E0E0E0;
+  --color-gray-400: #BDBDBD;
+  --color-gray-500: #9E9E9E;
+  --color-gray-600: #757575;
+  --color-gray-700: #616161;
+  --color-gray-800: #424242;
+  --color-gray-900: #212121;
+  
+  /* ظلال محسّنة */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  
+  /* ظلال ملونة */
+  --shadow-primary: 0 4px 14px 0 rgba(33, 150, 243, 0.39);
+  --shadow-success: 0 4px 14px 0 rgba(76, 175, 80, 0.39);
+  --shadow-warning: 0 4px 14px 0 rgba(255, 152, 0, 0.39);
+  --shadow-error: 0 4px 14px 0 rgba(244, 67, 54, 0.39);
+  
+  /* انتقالات محسّنة */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* مسافات محسّنة */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  
+  /* نصف الأقطار */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+/* ===== تحسينات الأنيميشن ===== */
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade In Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Down */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale In */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide In Right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide In Left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Bounce */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Pulse */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Spin */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== تحسينات البطاقات ===== */
+.shipment-card,
+.card {
+  transition: all var(--transition-base);
+  will-change: transform, box-shadow;
+}
+
+.shipment-card:hover,
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.shipment-card:active,
+.card:active {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* تأثير الظهور التدريجي للبطاقات */
+.shipment-card {
+  animation: fadeInUp var(--transition-base) ease-out;
+  animation-fill-mode: both;
+}
+
+.shipment-card:nth-child(1) { animation-delay: 0.05s; }
+.shipment-card:nth-child(2) { animation-delay: 0.1s; }
+.shipment-card:nth-child(3) { animation-delay: 0.15s; }
+.shipment-card:nth-child(4) { animation-delay: 0.2s; }
+.shipment-card:nth-child(5) { animation-delay: 0.25s; }
+.shipment-card:nth-child(6) { animation-delay: 0.3s; }
+
+/* ===== تحسينات الأزرار ===== */
+.primary-btn,
+.secondary-btn,
+button[type="submit"],
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  will-change: transform, box-shadow;
+}
+
+/* تأثير الموجة عند النقر */
+.primary-btn::before,
+.secondary-btn::before,
+button[type="submit"]::before,
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.primary-btn:active::before,
+.secondary-btn:active::before,
+button[type="submit"]:active::before,
+.btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* تأثير Hover محسّن */
+.primary-btn:hover,
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary);
+}
+
+.primary-btn:active,
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background: var(--color-gray-50);
+}
+
+/* حالة التحميل للأزرار */
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+/* ===== تحسينات الإدخال ===== */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+textarea,
+select {
+  transition: all var(--transition-base);
+  will-change: border-color, box-shadow;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px var(--color-primary-50);
+  transform: translateY(-1px);
+}
+
+input:hover:not(:focus),
+textarea:hover:not(:focus),
+select:hover:not(:focus) {
+  border-color: var(--color-gray-400);
+}
+
+/* حالة الخطأ */
+input.error,
+textarea.error,
+select.error {
+  border-color: var(--color-error-500);
+  background: var(--color-error-50);
+}
+
+input.error:focus,
+textarea.error:focus,
+select.error:focus {
+  box-shadow: 0 0 0 3px var(--color-error-100);
+}
+
+/* حالة النجاح */
+input.success,
+textarea.success,
+select.success {
+  border-color: var(--color-success-500);
+  background: var(--color-success-50);
+}
+
+/* ===== تحسينات النماذج ===== */
+.modal-overlay {
+  animation: fadeIn var(--transition-base) ease-out;
+}
+
+.modal-content {
+  animation: scaleIn var(--transition-base) ease-out;
+}
+
+/* ===== تحسينات حالات التحميل ===== */
+.loading-spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--color-gray-200);
+  border-top-color: var(--color-primary-500);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.loading-spinner-sm {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+}
+
+.loading-spinner-lg {
+  width: 60px;
+  height: 60px;
+  border-width: 6px;
+}
+
+/* Skeleton Loading */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-gray-200) 25%,
+    var(--color-gray-100) 50%,
+    var(--color-gray-200) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-md);
+}
+
+.skeleton-text {
+  height: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-title {
+  height: 1.5rem;
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+.skeleton-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+/* ===== تحسينات الإشعارات ===== */
+.toast {
+  animation: slideInRight var(--transition-base) ease-out;
+}
+
+.toast.toast-hide {
+  animation: slideInRight var(--transition-base) ease-out reverse;
+}
+
+/* ===== تحسينات الحالات الفارغة ===== */
+.empty-state {
+  animation: fadeInUp var(--transition-slow) ease-out;
+}
+
+.empty-state-icon {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* ===== تحسينات التلميحات ===== */
+.tooltip {
+  position: relative;
+}
+
+.tooltip::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  padding: 0.5rem 0.75rem;
+  background: var(--color-gray-900);
+  color: white;
+  font-size: 0.875rem;
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-base);
+  z-index: 1000;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: var(--color-gray-900);
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-base);
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+/* ===== تحسينات الشارات ===== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+.badge-primary {
+  background: var(--color-primary-100);
+  color: var(--color-primary-700);
+}
+
+.badge-success {
+  background: var(--color-success-100);
+  color: var(--color-success-700);
+}
+
+.badge-warning {
+  background: var(--color-warning-100);
+  color: var(--color-warning-700);
+}
+
+.badge-error {
+  background: var(--color-error-100);
+  color: var(--color-error-700);
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+/* ===== تحسينات الاستجابة ===== */
+@media (max-width: 768px) {
+  .shipment-card:hover,
+  .card:hover {
+    transform: none;
+  }
+  
+  .primary-btn:hover,
+  .secondary-btn:hover {
+    transform: none;
+  }
+}
+
+/* ===== تحسينات إمكانية الوصول ===== */
+*:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* تحسين التباين للنصوص */
+.text-high-contrast {
+  color: var(--color-gray-900);
+  font-weight: 500;
+}
+
+/* ===== تحسينات الأداء ===== */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* ===== تحسينات الطباعة ===== */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .shipment-card,
+  .card {
+    box-shadow: none !important;
+    border: 1px solid var(--color-gray-300);
+    page-break-inside: avoid;
+  }
+}

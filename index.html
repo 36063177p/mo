@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>نظام إدارة الطلبات</title>
+    
+    <!-- Material Design Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Font Awesome (Fallback) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Material Design Styles -->
+    <link rel="stylesheet" href="styles-material.css">
+    <link rel="stylesheet" href="ui-overrides-material.css">
+    
+    <!-- UX/UI Improvements -->
+    <link rel="stylesheet" href="ux-improvements.css">
+    
+    <!-- PWA manifest and theme color -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#2196F3">
+    
+    <!-- iOS support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="إدارة الطلبات">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512x512.png">
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- إضافة مكتبة SheetJS قبل script app.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- إضافة مكتبة Chart.js قبل script app.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- إضافة مكتبة html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- Firebase (Compat) لإعداد FCM عبر Service Worker) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-messaging-compat.js"></script>
+<script defer data-domain="magenta-shelby-54.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script></head>
+<body>
+    <!-- قسم تسجيل الدخول -->
+    <div id="loginSection" class="auth-section">
+        <h2>تسجيل الدخول</h2>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="البريد الإلكتروني" required>
+            <input type="password" id="loginPassword" placeholder="كلمة المرور" required>
+            <button type="submit">دخول</button>
+        </form>
+    </div>
+
+    <!-- شريط علوي للموبايل -->
+    <div class="mobile-header">
+        <button class="hamburger-menu" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="page-title">لوحة التحكم</h1>
+        <div class="header-actions">
+            <button id="notificationsBtn" class="notifications-btn">
+                <i class="fas fa-bell"></i>
+                <span id="notificationsBadge" class="notifications-badge">0</span>
+            </button>
+            <!-- زر إرسال إشعار تجريبي -->
+            <button id="sendTestNotificationBtn" class="notifications-btn" title="إرسال إشعار تجريبي">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+            <!-- زر تثبيت التطبيق كـ PWA -->
+            <button id="installAppBtn" class="notifications-btn" title="تثبيت التطبيق" style="display:none">
+                <i class="fas fa-download"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- الشريط الجانبي -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>القائمة</h3>
+            <button class="close-sidebar" onclick="closeSidebar()">
+                <i class="fas fa-times"></i>
+            </button>
+            </div>
+        <nav class="sidebar-nav">
+            <button class="sidebar-btn active" data-tab="dashboard">
+                <i class="fas fa-tachometer-alt"></i>
+                لوحة المعلومات
+            </button>
+            <button class="sidebar-btn" data-tab="shipments">
+                <i class="fas fa-ship"></i>
+                الشحنات
+            </button>
+        </nav>
+        </div>
+        
+    <!-- طبقة الإخفاء للشريط الجانبي -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+
+
+    <!-- قسم الشحنات -->
+    <div id="shipmentsSection" class="tab-content hidden">
+        <!-- Header Section -->
+        <div class="shipments-header">
+            <h1 class="shipments-title">الشحنات</h1>
+            <button id="addShipmentBtn" class="add-shipment-btn">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="shipments-search-container">
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="shipmentSearch" placeholder="ابحث بالاسم أو الرقم...">
+            </div>
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">الكل</button>
+            <button class="filter-tab" data-filter="upcoming">قادمة</button>
+            <button class="filter-tab" data-filter="delayed">متأخرة</button>
+            <button class="filter-tab" data-filter="action-required">تحتاج إجراء</button>
+        </div>
+        
+        <!-- Hidden Advanced Filters -->
+        <div class="advanced-filters" id="advancedFilters" style="display: none;">
+                <div class="filters-row">
+                    <select id="filterStatus">
+                        <option value="all">جميع الحالات</option>
+                        <option value="تم تأكيد الطلب">تم تأكيد الطلب</option>
+                        <option value="تم الشحن">تم الشحن</option>
+                        <option value="في انتظار تخليص الجمركي">في انتظار تخليص الجمركي</option>
+                        <option value="تم الاستلام">تم الاستلام</option>
+                    </select>
+                    
+                    <select id="filterCustoms">
+                        <option value="all">جميع الإفراجات</option>
+                        <option value="released">تم الإفراج</option>
+                        <option value="pending">في انتظار الإفراج</option>
+                    </select>
+                    
+                    <select id="filterPayment">
+                        <option value="all">جميع الدفعات</option>
+                        <option value="completed">تم الدفع</option>
+                        <option value="pending">في انتظار الدفع</option>
+                    </select>
+                    
+                    <button id="resetFilters" class="reset-filters-btn" title="إعادة تعيين جميع الفلاتر">
+                        <i class="fas fa-undo"></i> إعادة تعيين
+                    </button>
+                </div>
+                
+            <!-- Date Filter -->
+                <div class="date-filter">
+                    <input type="date" id="startDate" placeholder="من تاريخ">
+                    <input type="date" id="endDate" placeholder="إلى تاريخ">
+                </div>
+            </div>
+        
+        <!-- Shipments Cards Container -->
+        <div class="shipments-cards-container" id="shipmentsCardsContainer">
+            <!-- Cards will be dynamically generated here -->
+            <div class="empty-state">
+                <i class="fas fa-box-open empty-state-icon"></i>
+                <h3 class="empty-state-title">لا توجد شحنات</h3>
+                <p class="empty-state-description">ابدأ بإضافة شحنة جديدة أو جرب البيانات التجريبية</p>
+                <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                    <button class="primary-btn" onclick="testLoadShipments()">تحميل بيانات تجريبية</button>
+                    <button class="secondary-btn" onclick="testAdvancedNotifications()">اختبار الإشعارات</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hidden Table for Data Processing -->
+        <div class="table-container" style="display: none;">
+            <table id="shipmentsTable">
+                <thead>
+                    <tr>
+                        <th>رقم الشحنة</th>
+                        <th>المورد</th>
+                        <th>نوع البضاعة</th>
+                        <th>الكمية</th>
+                        <th>الوحدة</th>
+                        <th>شركة الشحن</th>
+                        <th>مينا الوصول</th>
+                        <th>بلد المنشأ</th>
+                        <th>موعد الوصول</th>
+                        <th>شركة التخليص</th>
+                        <th>حالة الإفراج</th>
+                        <th>قيمة الحاوية</th>
+                        <th>رقم الحاوية</th>
+                        <th>رقم BL</th>
+                        <th>حالة الدفع</th>
+                        <th>موعد الدفع</th>
+                        <th>موعد طلب الإفراج</th>
+                        <th>وزن الحاوية</th>
+                        <th>الحالة العامة</th>
+                        <th>المستندات</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="shipmentsTableBody"></tbody>
+            </table>
+    </div>
+
+        <!-- نموذج إضافة/تعديل الشحنة -->
+        <div id="shipmentModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="shipmentModalTitle">إضافة شحنة جديدة</h2>
+                <form id="shipmentForm">
+                    <!-- 1. اسم فريد لكل شحنة -->
+                    <div class="full-width">
+                        <label for="shipmentNumber">رقم الشحنة *</label>
+                        <input type="text" id="shipmentNumber" name="shipmentNumber" required readonly>
+        </div>
+        
+                    <!-- 2. اسم المورد -->
+                    <div>
+                        <label for="supplierName">المورد *</label>
+                        <input type="text" id="supplierName" name="supplierName" required>
+    </div>
+
+                    <!-- 3. نوع البضاعة -->
+                    <div>
+                        <label for="goodsType">نوع البضاعة *</label>
+                        <input type="text" id="goodsType" name="goodsType" required>
+        </div>
+        
+                    <!-- 4. الكمية -->
+                    <div>
+                        <label for="quantity">الكمية *</label>
+                        <input type="number" id="quantity" name="quantity" required min="0" step="0.01">
+    </div>
+
+                    <!-- 5. الوحدة -->
+                    <div>
+                        <label for="unit">الوحدة *</label>
+                        <select id="unit" name="unit" required>
+                            <option value="">اختر الوحدة</option>
+                            <option value="قطعة">قطعة</option>
+                            <option value="كيلوغرام">كيلوغرام</option>
+                            <option value="طن">طن</option>
+                            <option value="متر">متر</option>
+                            <option value="متر مربع">متر مربع</option>
+                            <option value="متر مكعب">متر مكعب</option>
+                            <option value="لتر">لتر</option>
+                            <option value="صندوق">صندوق</option>
+                            <option value="حزمة">حزمة</option>
+                        </select>
+        </div>
+        
+                    <!-- 6. شركة الشحن (حقل نص) -->
+                    <div>
+                        <label for="shippingCompany">شركة الشحن *</label>
+                        <input type="text" id="shippingCompany" name="shippingCompany" placeholder="اكتب اسم شركة الشحن" required>
+                    </div>
+        
+                    <!-- 7. مينا الوصول -->
+                    <div>
+                        <label for="arrivalPort">مينا الوصول</label>
+                        <input type="text" id="arrivalPort" name="arrivalPort">
+    </div>
+
+                    <!-- 8. بلد المنشأ -->
+                    <div>
+                        <label for="originCountry">بلد المنشأ</label>
+                        <input type="text" id="originCountry" name="originCountry">
+            </div>
+
+                    <!-- 9. موعد الوصول -->
+                    <div>
+                        <label for="arrivalDate">موعد الوصول *</label>
+                        <input type="date" id="arrivalDate" name="arrivalDate" required>
+                    </div>
+
+                    <!-- 10. شركة التخليص (حقل نص) -->
+                    <div>
+                        <label for="clearanceCompany">شركة التخليص</label>
+                        <input type="text" id="clearanceCompany" name="clearanceCompany" placeholder="اكتب اسم شركة التخليص">
+                    </div>
+
+                    <!-- 11. حالة الإفراج -->
+                    <div>
+                        <label for="customsStatus">حالة الإفراج</label>
+                        <select id="customsStatus" name="customsStatus">
+                            <option value="في الانتظار">في الانتظار</option>
+                            <option value="تم الإفراج">تم الإفراج</option>
+                            <option value="مرفوض">مرفوض</option>
+                        </select>
+                        </div>
+
+                    <!-- 12. قيمة الحاوية -->
+                    <div>
+                        <label for="containerValue">قيمة الحاوية ($)</label>
+                        <input type="number" id="containerValue" name="containerValue" min="0" step="0.01">
+                        </div>
+
+                    <!-- 13. رقم الحاوية -->
+                    <div>
+                        <label for="containerNumber">رقم الحاوية</label>
+                        <input type="text" id="containerNumber" name="containerNumber">
+                    </div>
+
+                    <!-- 14. رقم بوليصة الشحن -->
+                    <div>
+                        <label for="blNumber">رقم بوليصة الشحن</label>
+                        <input type="text" id="blNumber" name="blNumber">
+                        </div>
+
+                    <!-- 15. حالة الدفع -->
+                    <div>
+                        <label for="paymentStatus">حالة الدفع</label>
+                        <select id="paymentStatus" name="paymentStatus">
+                            <option value="غير مدفوع">غير مدفوع</option>
+                            <option value="مدفوع">مدفوع</option>
+                            <option value="في انتظار الدفع">في انتظار الدفع</option>
+                        </select>
+                        </div>
+
+                    <!-- 16. موعد الدفع -->
+                    <div>
+                        <label for="paymentDate">موعد الدفع</label>
+                        <input type="date" id="paymentDate" name="paymentDate">
+                    </div>
+
+                    <!-- 17. موعد طلب الإفراج الجمركي -->
+                    <div>
+                        <label for="customsRequestDate">موعد طلب الإفراج الجمركي</label>
+                        <input type="date" id="customsRequestDate" name="customsRequestDate">
+                    </div>
+
+                    <!-- 18. وزن الحاوية -->
+                    <div>
+                        <label for="containerWeight">وزن الحاوية (كغ)</label>
+                        <input type="number" id="containerWeight" name="containerWeight" min="0" step="0.01">
+            </div>
+
+                    <!-- 19. الحالة العامة -->
+                    <div>
+                        <label for="status">الحالة العامة</label>
+                        <select id="status" name="status">
+                            <option value="تم تأكيد الطلب">تم تأكيد الطلب</option>
+                            <option value="تم الشحن">تم الشحن</option>
+                            <option value="في انتظار تخليص الجمركي">في انتظار تخليص الجمركي</option>
+                            <option value="تم الاستلام">تم الاستلام</option>
+                        </select>
+                    </div>
+                
+                    <!-- 20. ملاحظات -->
+                    <div class="full-width">
+                        <label for="notes">ملاحظات</label>
+                        <textarea id="notes" name="notes" rows="3"></textarea>
+                    </div>
+
+                    <!-- 21. المستندات -->
+                    <div class="documents-upload full-width">
+                        <label>المستندات المطلوبة</label>
+                        <div class="documents-grid">
+                            <div class="document-box" data-type="invoice">
+                                <i class="fas fa-file-invoice"></i>
+                                <span>الفاتورة</span>
+                                <input type="file" class="file-input" accept=".pdf,.jpg,.jpeg,.png">
+                                <div class="upload-status"></div>
+                            </div>
+                            <div class="document-box" data-type="certificate">
+                                <i class="fas fa-certificate"></i>
+                                <span>شهادة المنشأ</span>
+                                <input type="file" class="file-input" accept=".pdf,.jpg,.jpeg,.png">
+                                <div class="upload-status"></div>
+                            </div>
+                            <div class="document-box" data-type="policy">
+                                <i class="fas fa-file-contract"></i>
+                                <span>البوليصة</span>
+                                <input type="file" class="file-input" accept=".pdf,.jpg,.jpeg,.png">
+                                <div class="upload-status"></div>
+                        </div>
+                            <div class="document-box" data-type="packingList">
+                                <i class="fas fa-list-alt"></i>
+                                <span>قائمة التعبئة</span>
+                                <input type="file" class="file-input" accept=".pdf,.jpg,.jpeg,.png">
+                                <div class="upload-status"></div>
+                            </div>
+                            </div>
+                    </div>
+
+                    <button type="submit" id="submitShipment">حفظ الشحنة</button>
+                </form>
+                            </div>
+                    </div>
+
+        <!-- (تم نقل نافذة تفاصيل الشحنة إلى خارج التبويبات لتكون عالمية) -->
+                </div>
+
+
+    <!-- قسم شركات التخليص -->
+    <div id="clearanceCompaniesSection" class="tab-content hidden">
+        <h1>إدارة شركات التخليص</h1>
+        <div class="controls-container">
+            <button id="addClearanceCompanyBtn" class="primary-btn">إضافة شركة تخليص جديدة</button>
+            <button id="removeDuplicatesBtn" class="secondary-btn">حذف البيانات المتكررة</button>
+            
+            <div class="search-filters">
+                <input type="text" id="clearanceCompanySearch" placeholder="بحث عن شركات التخليص...">
+                    </div>
+                </div>
+
+        <div class="table-container">
+            <table id="clearanceCompaniesTable">
+                <thead>
+                    <tr>
+                        <th>اسم الشركة</th>
+                        <th>رقم الهاتف</th>
+                        <th>البريد الإلكتروني</th>
+                        <th>WhatsApp</th>
+                        <th>WeChat</th>
+                        <th>العنوان</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="clearanceCompaniesTableBody"></tbody>
+            </table>
+                    </div>
+                </div>
+
+
+
+    <!-- تحديث قسم لوحة المعلومات -->
+    
+    <!-- نافذة تفاصيل الشحنة (عالمية خارج جميع التبويبات) -->
+    <div id="shipmentDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetailsModal()">&times;</span>
+            <div id="shipmentDetailsContent"></div>
+        </div>
+    </div>
+    <div id="dashboardSection" class="tab-content">
+        <div class="dashboard-container">
+            <!-- قسم الشحنات القادمة -->
+            <div class="upcoming-shipments-section">
+                <div class="section-header-mobile">
+                    <h3 class="upcoming-title">نظرة عامة على الشحنات القادمة</h3>
+                    <button class="filter-icon-btn" title="خيارات">
+                        <i class="fas fa-sliders-h"></i>
+                    </button>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-range="all">الكل</button>
+                    <button class="filter-btn" data-range="7">هذا الأسبوع</button>
+                    <button class="filter-btn" data-range="14">الأسبوعين القادمين</button>
+                    <button class="filter-btn" data-range="30">هذا الشهر</button>
+                </div>
+                <div class="shipments-grid" id="upcomingShipmentsGrid"></div>
+            </div>
+
+            <!-- قسم التوصيات الذكية -->
+            <div class="smart-recommendations-section">
+                <div class="section-header-mobile">
+                    <h3>توصيات ذكية</h3>
+                        </div>
+                <div class="recommendations-grid" id="recommendationsGrid">
+                    <div class="recommendation-card">
+                        <div class="recommendation-content">
+                            <h4>تحسين مسار الشحن</h4>
+                            <p>اقتراح مسار بديل لتقليل التكاليف بنسبة 15%.</p>
+                            </div>
+                        <div class="recommendation-actions">
+                            <button class="recommendation-btn">عرض التفاصيل</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    <!-- شريط التنقل السفلي -->
+    <div class="bottom-navigation">
+        <button class="nav-item active" data-tab="dashboard">
+            <i class="fas fa-home"></i>
+            <span>الرئيسية</span>
+            </button>
+        <button class="nav-item" data-tab="shipments">
+                                <i class="fas fa-ship"></i>
+            <span>الشحنات</span>
+                        </button>
+    </div>
+
+    <!-- إضافة لوحة تحكم الإشعارات -->
+    <div id="notificationsPanel" class="notifications-panel hidden">
+        <div class="notifications-header">
+            <h3>الإشعارات</h3>
+            <div class="notifications-controls">
+                <button id="markAllRead" class="secondary-btn">
+                    <i class="fas fa-check-double"></i>
+                    تعليم الكل كمقروء
+                </button>
+                <button id="clearAllNotifications" class="secondary-btn">
+                    <i class="fas fa-trash"></i>
+                    مسح الكل
+                </button>
+                <button id="notificationsSettings" class="secondary-btn">
+                    <i class="fas fa-cog"></i>
+                    الإعدادات
+                </button>
+            </div>
+        </div>
+        <div class="notifications-filters">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="shipments">الشحنات</button>
+        </div>
+        <div class="notifications-list" id="notificationsList">        </div>
+
+
+
+
+
+
+    <!-- نموذج إضافة/تعديل إعدادات الإشعارات -->
+    <div id="notificationsSettingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>إعدادات الإشعارات</h2>
+            <form id="notificationsSettingsForm">
+                <div class="settings-group">
+                    <h3>الإشعارات الصوتية</h3>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="enableSoundNotifications" checked>
+                            تفعيل الإشعارات الصوتية
+                        </label>
+                        <select id="notificationSound" class="sound-select">
+                            <option value="default">الصوت الافتراضي</option>
+                            <option value="bell">جرس</option>
+                            <option value="chime">نغمة</option>
+                            <option value="alert">تنبيه</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>إشعارات سطح المكتب</h3>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="enableDesktopNotifications">
+                            تفعيل إشعارات سطح المكتب
+                        </label>
+                        <button type="button" id="requestNotificationPermission" class="secondary-btn">
+                            طلب الإذن
+                        </button>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>إشعارات WhatsApp</h3>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="enableWhatsAppNotifications">
+                            تفعيل إشعارات WhatsApp
+                        </label>
+                        <input type="tel" id="whatsappNumber" placeholder="رقم WhatsApp (مثال: 963XXXXXXXX)" pattern="[0-9]+">
+                        <div class="whatsapp-status" id="whatsappStatus"></div>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>أنواع الإشعارات</h3>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="notifyNewOrders" checked>
+                            إشعارات الطلبات الجديدة
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="notifyShipments" checked>
+                            إشعارات الشحنات
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="primary-btn">حفظ الإعدادات</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- نموذج إضافة شركة تخليص -->
+    <div id="clearanceCompanyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeClearanceCompanyModal()">&times;</span>
+            <h2 id="clearanceCompanyModalTitle">إضافة شركة تخليص جديدة</h2>
+            <div style="background: #f0f8ff; padding: 12px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #2a7a7b;">
+                <p style="margin: 0; font-size: 0.9rem; color: #2a7a7b;">
+                    <i class="fas fa-info-circle"></i> 
+                    <strong>ملاحظة:</strong> يمكنك إضافة رقم فردي أو رابط مجموعة أو كليهما. سيتم استخدام المجموعة كأولوية عند الإرسال.
+                </p>
+            </div>
+            <form id="clearanceCompanyForm">
+                <div class="form-group">
+                    <label for="companyName">اسم الشركة</label>
+                    <input type="text" id="companyName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="companyPhone">رقم الهاتف</label>
+                    <input type="tel" id="companyPhone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="companyEmail">البريد الإلكتروني</label>
+                    <input type="email" id="companyEmail">
+                </div>
+                
+                <div class="form-group">
+                    <label for="companyWhatsApp">رقم WhatsApp الفردي</label>
+                    <input type="tel" id="companyWhatsApp" placeholder="مثال: +966501234567">
+                </div>
+                
+                <div class="form-group">
+                    <label for="companyWhatsAppGroup">رابط مجموعة WhatsApp</label>
+                    <input type="url" id="companyWhatsAppGroup" placeholder="مثال: https://chat.whatsapp.com/XXXXXXXXX">
+                    <small style="color: #666; font-size: 0.8rem; margin-top: 5px; display: block;">
+                        💡 للحصول على الرابط: افتح المجموعة → المزيد (⋮) → معلومات المجموعة → دعوة عبر رابط
+                    </small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="companyWeChat">رقم WeChat الفردي</label>
+                    <input type="text" id="companyWeChat" placeholder="مثال: wechat_id">
+                </div>
+                
+                <div class="form-group">
+                    <label for="companyWeChatGroup">رابط مجموعة WeChat</label>
+                    <input type="url" id="companyWeChatGroup" placeholder="مثال: https://work.weixin.qq.com/XXX">
+                    <small style="color: #666; font-size: 0.8rem; margin-top: 5px; display: block;">
+                        💡 للحصول على الرابط: افتح المجموعة → تفاصيل المجموعة → مشاركة → نسخ الرابط
+                    </small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="companyAddress">العنوان</label>
+                    <textarea id="companyAddress" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="primary-btn">حفظ</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Material Design Interactions -->
+    <script src="material-interactions.js"></script>
+    
+    <!-- Main App Script (يجب أن يحمل أولاً) -->
+    <script src="app.js"></script>
+    
+    <!-- UI Enhancements -->
+    <script src="ui-enhancements.js"></script>
+    
+    <!-- UX/UI Improvements -->
+    <script src="ux-improvements.js"></script>
+    
+    <!-- Advanced Notifications (بعد app.js) -->
+    <script src="notifications-advanced.js"></script>
+</body>
+</html>
